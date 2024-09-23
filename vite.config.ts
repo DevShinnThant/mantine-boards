@@ -5,6 +5,10 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [
     remix({
+      basename: "/",
+      buildDirectory: "build",
+      ignoredRouteFiles: [],
+      serverBuildFile: "index.js",
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
