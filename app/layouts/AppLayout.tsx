@@ -19,16 +19,21 @@ export default function AppLayout({ children }: Children) {
     >
       <AppShell.Header>
         <Group
+          className={classes.header}
           w="100%"
           h="100%"
           justify="space-between"
-          px="calc(var(--mantine-spacing-md) * 4)"
         >
           <Flex flex={1} ff="Greycliff" gap="sm" align="center">
             <MantineLogo size={30} color="black" type="mark" />
-            <Text className={classes.logo_title} fz={24}>
-              Mantine Dashboard
-            </Text>
+            <Flex align="center" gap={8}>
+              <Text className={classes.logo_title} fz={24}>
+                Mantine
+              </Text>
+              <Text visibleFrom="md" className={classes.logo_title} fz={24}>
+                Dashboard
+              </Text>
+            </Flex>
           </Flex>
           <Flex align="center" gap="sm">
             <SearchControl />

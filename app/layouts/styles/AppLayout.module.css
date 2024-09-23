@@ -1,3 +1,11 @@
 .logo_title {
   color: light-dark(var(--mantine-color-dark-9), var(--mantine-color-white));
 }
+
+.header {
+  padding: 0 calc(var(--mantine-spacing-md) * 4);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: 0 calc(var(--mantine-spacing-md));
+  }
+}
