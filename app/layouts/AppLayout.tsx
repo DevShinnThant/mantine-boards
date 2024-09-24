@@ -1,4 +1,4 @@
-import { AppShell, Flex, Group, rem, Text } from "@mantine/core";
+import { AppShell, Flex, Group, Text } from "@mantine/core";
 import { useHeadroom } from "@mantine/hooks";
 import ThemeSwitch from "~/components/ThemeSwitch";
 import { GithubControl } from "./header/GithubControl";
@@ -44,7 +44,7 @@ export default function AppLayout({ children }: Children) {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Main pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>
+      <AppShell.Main px={0} pt={59} className={classes.main}>
         {children}
       </AppShell.Main>
     </AppShell>

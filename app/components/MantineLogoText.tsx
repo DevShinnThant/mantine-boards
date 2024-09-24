@@ -9,7 +9,6 @@ import classes from "./styles/MantineLogo.module.css";
 export function MantineLogoText({
   size,
   color,
-  variant,
   inverted,
   style,
   className,
@@ -23,11 +22,7 @@ export function MantineLogoText({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 623 163"
       style={{ height: rem(size), ...style }}
-      className={cx(
-        classes.logo,
-        { [classes.mantineUILogo]: variant === "ui.mantine.dev" },
-        className
-      )}
+      className={cx(classes.logo, className)}
     >
       <g fill="none" fillRule="evenodd">
         <path
