@@ -1,18 +1,18 @@
+import { ColorSchemeScript, MantineProvider } from "@mantine/core"
+import "@mantine/core/styles.css"
+import "@mantine/spotlight/styles.css"
+import type { LinksFunction } from "@remix-run/node"
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
-import "@mantine/core/styles.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import AppLayout from "./layouts/AppLayout";
-import { theme } from "./styles/theme";
-import "./styles/fonts/styles.css";
-import "./styles/global.css";
-import "@mantine/spotlight/styles.css";
+} from "@remix-run/react"
+import AppLayout from "./layouts/AppLayout"
+import "./styles/fonts/styles.css"
+import "./styles/global.css"
+import { theme } from "./styles/theme"
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -29,7 +29,7 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
-];
+]
 
 export function Layout({ children }: Children) {
   return (
@@ -49,7 +49,7 @@ export function Layout({ children }: Children) {
         <Scripts />
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
@@ -57,5 +57,5 @@ export default function App() {
     <AppLayout>
       <Outlet />
     </AppLayout>
-  );
+  )
 }
