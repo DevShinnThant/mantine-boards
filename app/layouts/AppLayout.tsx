@@ -1,17 +1,17 @@
-import { AppShell, Flex, Group, Text } from "@mantine/core";
-import { useHeadroom } from "@mantine/hooks";
-import ThemeSwitch from "~/components/ThemeSwitch";
-import { GithubControl } from "./header/GithubControl";
-import SearchControl from "./header/SearchControl";
-import { MantineLogo } from "~/components/MantineLogo";
-import classes from "./styles/AppLayout.module.css";
-import { DiscordControl } from "./header/DiscordControl";
+import { AppShell, Flex, Group, Text } from "@mantine/core"
+import { useHeadroom } from "@mantine/hooks"
+import { MantineLogo } from "~/components/MantineLogo"
+import ThemeSwitch from "~/components/ThemeSwitch"
+import { DiscordControl } from "./header/DiscordControl"
+import { GithubControl } from "./header/GithubControl"
+import SearchControl from "./header/SearchControl"
+import classes from "./styles/AppLayout.module.css"
 
-const GITHUB_LINK = import.meta.env.VITE_GITHUB_REPO;
-const DISCORD_LINK = import.meta.env.VITE_DISCORD_ACC;
+const GITHUB_LINK = import.meta.env.VITE_GITHUB_REPO
+const DISCORD_LINK = import.meta.env.VITE_DISCORD_ACC
 
 export default function AppLayout({ children }: Children) {
-  const pinned = useHeadroom({ fixedAt: 120 });
+  const pinned = useHeadroom({ fixedAt: 120 })
 
   return (
     <AppShell
@@ -49,5 +49,5 @@ export default function AppLayout({ children }: Children) {
         {children}
       </AppShell.Main>
     </AppShell>
-  );
+  )
 }
