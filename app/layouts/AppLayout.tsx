@@ -8,6 +8,7 @@ import classes from "./styles/AppLayout.module.css";
 import { DiscordControl } from "./header/DiscordControl";
 
 const GITHUB_LINK = import.meta.env.VITE_GITHUB_REPO;
+const DISCORD_LINK = import.meta.env.VITE_DISCORD_ACC;
 
 export default function AppLayout({ children }: Children) {
   const pinned = useHeadroom({ fixedAt: 120 });
@@ -38,7 +39,7 @@ export default function AppLayout({ children }: Children) {
           <Flex align="center" gap="sm">
             <SearchControl />
             <GithubControl link={GITHUB_LINK} />
-            <DiscordControl link="" />
+            <DiscordControl link={DISCORD_LINK} />
             <ThemeSwitch />
           </Flex>
         </Group>

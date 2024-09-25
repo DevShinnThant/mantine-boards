@@ -65,10 +65,18 @@ export default function HeaderHero() {
           fast, accessible, and dynamic user interfaces.
         </Text>
         <Group className={classes.controls}>
-          <Button size="sm" className={classes.control} color="accent.4">
-            Browse Dashboards
+          <Button
+            component="a"
+            aria-label="go to github mantine docs"
+            href={MANTINE_DOC}
+            target="_blank"
+            size="sm"
+            variant="default"
+            className={classes.control}
+            rightSection={<IconShare size={18} />}
+          >
+            Get started with Mantine
           </Button>
-
           <Button
             component="a"
             href={GIT_REPO}
@@ -81,17 +89,8 @@ export default function HeaderHero() {
           >
             GitHub
           </Button>
-          <Button
-            component="a"
-            aria-label="go to github mantine docs"
-            href={MANTINE_DOC}
-            target="_blank"
-            size="sm"
-            variant="default"
-            className={classes.control}
-            rightSection={<IconShare size={18} />}
-          >
-            Get started with Mantine
+          <Button size="sm" className={classes.control} color="accent.4">
+            Browse Dashboards
           </Button>
         </Group>
 

@@ -11,6 +11,7 @@ export function DiscordControl({ link }: DiscordControlProps) {
     <HeaderControl
       tooltip="Discord"
       component="a"
+      target="_blank"
       href={link}
       visibleFrom="md"
       className={classes.discord}

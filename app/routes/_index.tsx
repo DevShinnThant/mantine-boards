@@ -1,5 +1,7 @@
+import { Stack } from "@mantine/core";
 import type { MetaFunction } from "@remix-run/node";
 import HeaderHero from "~/layouts/HeaderHero";
+import PreviewDashboards from "~/layouts/PreviewDashboards";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,5 +15,10 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <HeaderHero />;
+  return (
+    <Stack gap="xl">
+      <HeaderHero />
+      <PreviewDashboards />
+    </Stack>
+  );
 }

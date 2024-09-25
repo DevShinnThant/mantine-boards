@@ -1,0 +1,49 @@
+.root {
+  cursor: pointer;
+
+  @mixin light {
+    background-color: transparent;
+    border: 1px solid var(--mantine-color-gray-3);
+  }
+  &:hover {
+    .vote_section {
+      opacity: 1;
+    }
+  }
+}
+
+.image {
+  object-fit: contain;
+  height: rem(420);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: rem(300);
+  }
+}
+
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-accent-2));
+}
+
+.description {
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-2));
+}
+
+.like_icon {
+  @mixin light {
+    background-color: var(--mantine-color-gray-6);
+  }
+}
+
+.vote_section {
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
