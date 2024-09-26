@@ -1,6 +1,10 @@
 .root {
   cursor: pointer;
 
+  @mixin dark {
+    border: 1px solid var(--mantine-color-gray-8);
+  }
+
   @mixin light {
     background-color: transparent;
     border: 1px solid var(--mantine-color-gray-3);

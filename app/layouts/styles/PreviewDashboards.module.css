@@ -1,5 +1,8 @@
 .root {
-  background-color: light-dark(var(--mantine-color-white), #242424);
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-6)
+  );
   padding: rem(60);
 
   @media (max-width: $mantine-breakpoint-md) {
