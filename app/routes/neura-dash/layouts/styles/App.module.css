@@ -18,8 +18,6 @@
   position: absolute; /* No need in actual implementation */
   height: 100%;
 
-  background-color: aqua;
-
   @media (min-width: 48em) {
     height: 100%;
     top: 0;
@@ -47,6 +45,7 @@
 
 .main {
   width: 100%;
+
   @media (min-width: 48em) {
     padding-left: calc(var(--app-shell-navbar-width) + rem(24));
     padding-right: rem(24);

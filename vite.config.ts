@@ -14,16 +14,10 @@ export default defineConfig({
         return defineRoutes((route) => {
           route("neura-dash", "routes/neura-dash/layout.tsx", () => {
             route("", "routes/neura-dash/dashboard.tsx", { index: true })
+            route("ecommerce", "routes/neura-dash/ecommerce.tsx")
           })
         })
       },
-
-      // route("about", "about/route.tsx")
-      // route("concerts", "concerts/layout.tsx", () => {
-      //   route("", "concerts/home.tsx", { index: true })
-      //   route("trending", "concerts/trending.tsx")
-      //   route(":city", "concerts/city.tsx")
-      // })
 
       future: {
         v3_fetcherPersist: true,
@@ -34,10 +28,4 @@ export default defineConfig({
 
     tsconfigPaths(),
   ],
-  // optimizeDeps: {
-  //   include: ["react-syntax-highlighter"],
-  //   esbuildOptions: {
-  //     target: "es2017",
-  //   },
-  // },
 })

@@ -8,8 +8,6 @@ export default function useCurrentNav() {
   const currentNav = useMemo(
     () =>
       sideLinks.find((link) => {
-        // console.log(link.href.split("/"))
-
         return link.href.split("/").includes(pathname.split("/")[1])
       }),
     [pathname]

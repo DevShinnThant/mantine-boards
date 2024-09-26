@@ -31,19 +31,19 @@ export const sideLinks: SideLink[] = [
   {
     title: "Dashboard",
     label: "Dashboard",
-    href: "/dashboard",
+    href: "/neura-dash",
     icon: Box1,
     subs: [
       {
         title: "Analytics",
         label: "Analytics",
-        href: "/dashboard/analytics",
+        href: "/neura-dash",
         icon: Chart,
       },
       {
         title: "Ecommerce",
         label: "Ecommerce",
-        href: "/dashboard/expenses",
+        href: "/neura-dash/ecommerce",
         icon: ShoppingCart,
       },
       {
