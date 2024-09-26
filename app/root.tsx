@@ -8,7 +8,6 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
   isRouteErrorResponse,
   useRouteError,
 } from "@remix-run/react"
@@ -60,7 +59,6 @@ export function Layout({ children }: Children) {
         <MantineProvider defaultColorScheme="light" theme={theme}>
           {children}
         </MantineProvider>
-        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
