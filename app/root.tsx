@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import "@mantine/core/styles.css"
 import "@mantine/spotlight/styles.css"
@@ -10,6 +11,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react"
 import AppLayout from "./layouts/AppLayout"
+import { useSyntaxHighlightStore } from "./store/syntax-highter-store"
 import "./styles/fonts/styles.css"
 import "./styles/global.css"
 import { theme } from "./styles/theme"
@@ -32,6 +34,17 @@ export const links: LinksFunction = () => [
 ]
 
 export function Layout({ children }: Children) {
+  const { setWrapperComponent, setThemes } = useSyntaxHighlightStore()
+
+  useEffect(() => {
+    import("react-syntax-highlighter").then((module) => {
+      setWrapperComponent(module.Light)
+    })
+    import("react-syntax-highlighter/dist/esm/styles/hljs").then((mod) => {
+      setThemes(mod)
+    })
+  }, [setThemes, setWrapperComponent])
+
   return (
     <html lang="en">
       <head>

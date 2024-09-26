@@ -5,7 +5,6 @@ import {
   Box,
   Breadcrumbs,
   Center,
-  Code,
   Flex,
   Group,
   SegmentedControl,
@@ -15,6 +14,7 @@ import {
 } from "@mantine/core"
 import { MetaFunction } from "@remix-run/node"
 import { IconCode, IconCopy, IconEye } from "@tabler/icons-react"
+import { useSyntaxHighlightStore } from "~/store/syntax-highter-store"
 import { dashboards } from "~/assets/dashboards"
 import { HeaderControl } from "~/components/HeaderControl"
 import classes from "./styles/route.module.css"
@@ -144,6 +144,11 @@ export default function NeuraDash() {
 export default function NeuraDash() {
   const [value, setValue] = useState("preview")
 
+  const { wrapperComponent: WrapperComponent, themes } =
+    useSyntaxHighlightStore()
+
+  if (!WrapperComponent || !themes) return null
+
   return (
     <Stack className={classes.root} gap={50}>
       <Flex direction="column" align="start" gap={10}>
@@ -204,9 +209,9 @@ export default function NeuraDash() {
         <Box className={classes.snippetContainer}>
           {value === "preview" && <div>Preview</div>}
           {value === "code" && (
-            <div>
-              <Code block>{codeForPreviousDemo}</Code>
-            </div>
+            <WrapperComponent style={themes.atomOneDark} language="typescript">
+              {codeForPreviousDemo}
+            </WrapperComponent>
           )}
         </Box>
       </Flex>
