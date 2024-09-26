@@ -22,11 +22,15 @@
 }
 
 .title {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-accent-2));
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 }
 
 .description {
+  width: 80%;
   color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-2));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .like_icon {

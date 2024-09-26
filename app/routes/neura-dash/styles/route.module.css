@@ -1,0 +1,65 @@
+.root {
+  padding: var(--mantine-spacing-xl) var(--app-header-horizontal-padding);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: var(--mantine-spacing-md)
+      var(--app-header-horizontal-padding-mobile);
+  }
+}
+
+.breadcrumbs {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-gray));
+}
+
+.title {
+  font-family: Greycliff;
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-accent-2));
+}
+
+.description {
+  font-weight: 500;
+  width: 70%;
+  line-height: 1.75rem;
+  letter-spacing: rem(0.1);
+  font-size: rem(15);
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-gray-4));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+  }
+}
+
+.subTitle {
+  font-size: rem(15);
+  letter-spacing: rem(0.1);
+  font-weight: 500;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.badge {
+  color: light-dark(
+    var(--mantine-color-accent-5),
+    var(--mantine-color-accent-2)
+  );
+}
+
+.copyBtn {
+  color: light-dark(
+    var(--mantine-color-accent-7),
+    var(--mantine-color-accent-2)
+  );
+}
+
+.snippetContainer {
+  width: 100%;
+  border: rem(0.1) solid
+    light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-md);
+  background-color: light-dark(#f9fafb, var(--mantine-color-dark-8));
+  height: rem(500);
+  overflow-y: scroll;
+}

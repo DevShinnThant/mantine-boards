@@ -1,4 +1,4 @@
-import { createTheme } from "@mantine/core";
+import { createTheme } from "@mantine/core"
 
 export const theme = createTheme({
   colors: {
@@ -15,7 +15,8 @@ export const theme = createTheme({
       "hsl(261.2 72.6% 22.9%)",
     ],
   },
+  primaryColor: "gray",
   headings: {
     fontFamily: "Greycliff",
   },
-});
+})

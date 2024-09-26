@@ -1,3 +1,9 @@
 :root {
-  --accent-color: #3f80ff;
+  --app-header-height: rem(60);
+  --app-header-horizontal-padding: calc(var(--mantine-spacing-md) * 4);
+  --app-header-horizontal-padding-mobile: var(--mantine-spacing-md);
+}
+
+a {
+  text-decoration: none;
 }

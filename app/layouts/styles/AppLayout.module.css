@@ -3,10 +3,10 @@
 }
 
 .header {
-  padding: 0 calc(var(--mantine-spacing-md) * 4);
+  padding: 0 var(--app-header-horizontal-padding);
 
   @media (max-width: $mantine-breakpoint-md) {
-    padding: 0 calc(var(--mantine-spacing-md));
+    padding: 0 var(--app-header-horizontal-padding-mobile);
   }
 }
 
@@ -15,4 +15,5 @@
     var(--mantine-color-gray-1),
     var(--mantine-color-dark-8)
   );
+  padding-top: var(--app-header-height);
 }

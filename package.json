@@ -14,6 +14,7 @@
   "dependencies": {
     "@mantine/carousel": "^7.12.2",
     "@mantine/core": "^7.12.2",
+    "@mantine/dates": "^7.13.0",
     "@mantine/hooks": "^7.12.2",
     "@mantine/modals": "^7.12.2",
     "@mantine/nprogress": "^7.12.2",
@@ -22,10 +23,13 @@
     "@remix-run/react": "^2.12.1",
     "@remix-run/serve": "^2.12.1",
     "@tabler/icons-react": "^3.17.0",
+    "dayjs": "^1.11.13",
     "embla-carousel-react": "^8.3.0",
+    "iconsax-react": "^0.0.8",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.12.1",

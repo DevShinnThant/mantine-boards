@@ -1,5 +1,6 @@
 import { AppShell, Flex, Group, Text } from "@mantine/core"
 import { useHeadroom } from "@mantine/hooks"
+import { Link } from "@remix-run/react"
 import { MantineLogo } from "~/components/MantineLogo"
 import ThemeSwitch from "~/components/ThemeSwitch"
 import { DiscordControl } from "./header/DiscordControl"
@@ -15,7 +16,11 @@ export default function AppLayout({ children }: Children) {
 
   return (
     <AppShell
-      header={{ height: 60, collapsed: !pinned, offset: false }}
+      header={{
+        height: "var(--app-header-height)",
+        collapsed: !pinned,
+        offset: false,
+      }}
       padding="md"
     >
       <AppShell.Header>
@@ -25,17 +30,17 @@ export default function AppLayout({ children }: Children) {
           h="100%"
           justify="space-between"
         >
-          <Flex flex={1} ff="Greycliff" gap="sm" align="center">
-            <MantineLogo size={30} color="black" type="mark" />
-            <Flex align="center" gap={8}>
-              <Text className={classes.logo_title} fz={24}>
-                Mantine
-              </Text>
+          <Link to="/">
+            <Flex flex={1} ff="Greycliff" gap="sm" align="center">
+              <MantineLogo size={30} color="black" type="mark" />
               <Text visibleFrom="md" className={classes.logo_title} fz={24}>
+                Mantine Dashboard
+              </Text>
+              <Text hiddenFrom="md" className={classes.logo_title} fz={24}>
                 Dashboard
               </Text>
             </Flex>
-          </Flex>
+          </Link>
           <Flex align="center" gap="sm">
             <SearchControl />
             <GithubControl link={GITHUB_LINK} />
@@ -45,7 +50,7 @@ export default function AppLayout({ children }: Children) {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Main px={0} pt={59} className={classes.main}>
+      <AppShell.Main px={0} className={classes.main}>
         {children}
       </AppShell.Main>
     </AppShell>
