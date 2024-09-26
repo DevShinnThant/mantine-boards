@@ -3,6 +3,7 @@
 }
 
 .header {
+  z-index: var(--app-header-z-index);
   padding: 0 var(--app-header-horizontal-padding);
 
   @media (max-width: $mantine-breakpoint-md) {

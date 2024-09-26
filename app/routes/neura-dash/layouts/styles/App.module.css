@@ -1,0 +1,56 @@
+.header {
+  position: absolute; /* No need in actual implementation */
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+
+  @media (min-width: 48em) {
+    left: var(--app-shell-navbar-width);
+    width: calc(100% - var(--app-shell-navbar-width));
+  }
+
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-6)
+  );
+}
+
+.navbar {
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+  position: absolute; /* No need in actual implementation */
+  height: 100%;
+
+  background-color: aqua;
+
+  @media (min-width: 48em) {
+    height: 100%;
+    top: 0;
+  }
+  background: transparent;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &[data-collapse="true"] {
+    width: rem(298);
+  }
+
+  &[data-smallscreen="true"] {
+    width: rem(81);
+    height: 100vh !important;
+    top: 0;
+  }
+
+  &[data-smallscreen="true"][data-collapse="true"] {
+    width: rem(298);
+  }
+}
+
+.main {
+  width: 100%;
+  @media (min-width: 48em) {
+    padding-left: calc(var(--app-shell-navbar-width) + rem(24));
+    padding-right: rem(24);
+  }
+
+  background-color: light-dark(#eef1f9, var(--mantine-color-dark-7));
+}

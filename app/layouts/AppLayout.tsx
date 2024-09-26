@@ -1,5 +1,4 @@
 import { AppShell, Flex, Group, Text } from "@mantine/core"
-import { useHeadroom } from "@mantine/hooks"
 import { Link } from "@remix-run/react"
 import { MantineLogo } from "~/components/MantineLogo"
 import ThemeSwitch from "~/components/ThemeSwitch"
@@ -12,13 +11,10 @@ const GITHUB_LINK = import.meta.env.VITE_GITHUB_REPO
 const DISCORD_LINK = import.meta.env.VITE_DISCORD_ACC
 
 export default function AppLayout({ children }: Children) {
-  const pinned = useHeadroom({ fixedAt: 120 })
-
   return (
     <AppShell
       header={{
         height: "var(--app-header-height)",
-        collapsed: !pinned,
         offset: false,
       }}
       padding="md"

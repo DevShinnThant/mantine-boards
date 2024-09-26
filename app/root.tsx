@@ -9,6 +9,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
+  useRouteError,
 } from "@remix-run/react"
 import AppLayout from "./layouts/AppLayout"
 import { useSyntaxHighlightStore } from "./store/syntax-highter-store"
@@ -70,5 +72,26 @@ export default function App() {
     <AppLayout>
       <Outlet />
     </AppLayout>
+  )
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError()
+
+  if (isRouteErrorResponse(error)) {
+    return (
+      <>
+        <h1>
+          {error.status} {error.statusText}
+        </h1>
+        <p>{error.data}</p>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <h1>Error!</h1>
+    </>
   )
 }

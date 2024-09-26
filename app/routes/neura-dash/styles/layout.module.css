@@ -1,6 +1,5 @@
 .root {
   padding: var(--mantine-spacing-xl) var(--app-header-horizontal-padding);
-
   @media (max-width: $mantine-breakpoint-md) {
     padding: var(--mantine-spacing-md)
       var(--app-header-horizontal-padding-mobile);
@@ -54,12 +53,12 @@
 }
 
 .snippetContainer {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   border: rem(0.1) solid
     light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
   border-radius: var(--mantine-radius-md);
   padding: var(--mantine-spacing-md);
   background-color: light-dark(#f9fafb, var(--mantine-color-dark-8));
-  height: rem(500);
-  overflow-y: scroll;
 }
