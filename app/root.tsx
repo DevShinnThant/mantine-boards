@@ -3,14 +3,7 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import "@mantine/core/styles.css"
 import "@mantine/spotlight/styles.css"
 import type { LinksFunction } from "@remix-run/node"
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  isRouteErrorResponse,
-  useRouteError,
-} from "@remix-run/react"
+import { Links, Meta, Outlet, Scripts } from "@remix-run/react"
 import AppLayout from "./layouts/AppLayout"
 import { useSyntaxHighlightStore } from "./store/syntax-highter-store"
 import "./styles/fonts/styles.css"
@@ -70,26 +63,5 @@ export default function App() {
     <AppLayout>
       <Outlet />
     </AppLayout>
-  )
-}
-
-export function ErrorBoundary() {
-  const error = useRouteError()
-
-  if (isRouteErrorResponse(error)) {
-    return (
-      <>
-        <h1>
-          {error.status} {error.statusText}
-        </h1>
-        <p>{error.data}</p>
-      </>
-    )
-  }
-
-  return (
-    <>
-      <h1>Error!</h1>
-    </>
   )
 }

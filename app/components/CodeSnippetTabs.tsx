@@ -1,7 +1,17 @@
 import { useState } from "react"
-import { FloatingIndicator, Tabs } from "@mantine/core"
-import { FileContext } from "~/utils/getComponentCode"
+import {
+  CopyButton,
+  Flex,
+  FloatingIndicator,
+  Group,
+  Tabs,
+  Text,
+} from "@mantine/core"
+import { Copy, CopySuccess } from "iconsax-react"
+import { FileContext } from "~/utils/getDashboardCode"
 import { useSyntaxHighlightStore } from "~/store/syntax-highter-store"
+import { HeaderControl } from "./HeaderControl"
+import { getCodeFileIcon } from "./get-code-file-icon"
 import classes from "./styles/CodeSnippetTabs.module.css"
 
 interface Props {
@@ -25,25 +35,48 @@ export default function CodeSnippetTabs({ files, initialFile }: Props) {
 
   if (!WrapperComponent || !themes) return null
 
-  return (
-    <Tabs variant="none" value={value} onChange={setValue}>
-      <Tabs.List ref={setRootRef} className={classes.list}>
-        {files.map((file) => (
-          <Tabs.Tab
-            key={file.name}
-            value={file.name}
-            ref={setControlRef(file.name)}
-            className={classes.tab}
-          >
-            {file.name}
-          </Tabs.Tab>
-        ))}
+  const copyFile = files.find((file) => file.name === value)
 
-        <FloatingIndicator
-          target={value ? controlsRefs[value] : null}
-          parent={rootRef}
-          className={classes.indicator}
-        />
+  return (
+    <Tabs p={20} variant="none" value={value} onChange={setValue}>
+      <Tabs.List ref={setRootRef} className={classes.list}>
+        <Group w="100%" justify="space-between" align="center">
+          <Flex align="center">
+            {files.map((file) => (
+              <Tabs.Tab
+                key={file.name}
+                value={file.name}
+                ref={setControlRef(file.name)}
+                className={classes.tab}
+              >
+                <Flex align="center" gap={4}>
+                  {getCodeFileIcon(file.name)}
+                  <Text ff="Greycliff" fz={13} fw={500}>
+                    {file.name}
+                  </Text>
+                </Flex>
+              </Tabs.Tab>
+            ))}
+
+            <FloatingIndicator
+              target={value ? controlsRefs[value] : null}
+              parent={rootRef}
+              className={classes.indicator}
+            />
+          </Flex>
+
+          <CopyButton value={copyFile?.code || ""}>
+            {({ copied, copy }) => (
+              <HeaderControl tooltip={value || ""} onClick={copy}>
+                {copied ? (
+                  <CopySuccess color="var(--mantine-color-blue-4)" />
+                ) : (
+                  <Copy />
+                )}
+              </HeaderControl>
+            )}
+          </CopyButton>
+        </Group>
       </Tabs.List>
 
       {files.map((file) => (

@@ -54,7 +54,7 @@ export function getDashboardCode(componentFolder: string): FileContext[] {
   // Process the style files (e.g., .module.css)
   const styleFileContents = styleFiles.map((file) => ({
     name: file,
-    language: "scss",
+    language: "css",
     code: fs.readFileSync(path.join(stylesFolder, file), "utf-8"),
   }))
 

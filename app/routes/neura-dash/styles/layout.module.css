@@ -1,5 +1,6 @@
 .root {
-  padding: var(--mantine-spacing-xl) var(--app-header-horizontal-padding);
+  padding: calc(var(--mantine-spacing-xl) * 2)
+    var(--app-header-horizontal-padding);
   @media (max-width: $mantine-breakpoint-md) {
     padding: var(--mantine-spacing-md)
       var(--app-header-horizontal-padding-mobile);
@@ -45,6 +46,13 @@
   );
 }
 
+.switchControl {
+  background-color: light-dark(
+    lighten(var(--mantine-color-dark-0), 0.5),
+    var(--mantine-color-dark-9)
+  );
+}
+
 .copyBtn {
   color: light-dark(
     var(--mantine-color-accent-7),
@@ -59,6 +67,5 @@
   border: rem(0.1) solid
     light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
   border-radius: var(--mantine-radius-md);
-  padding: var(--mantine-spacing-md);
   background-color: light-dark(#f9fafb, var(--mantine-color-dark-8));
 }

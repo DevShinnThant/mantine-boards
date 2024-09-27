@@ -21,6 +21,8 @@
   transition: color 100ms ease;
   color: var(--mantine-color-gray-7);
 
+  height: rem(34);
+
   &[data-active] {
     color: var(--mantine-color-black);
   }

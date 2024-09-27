@@ -14,11 +14,11 @@ import {
 } from "@mantine/core"
 import { MetaFunction } from "@remix-run/node"
 import { Outlet, useLoaderData } from "@remix-run/react"
-import { IconCode, IconCopy, IconEye } from "@tabler/icons-react"
-import { getDashboardCode } from "~/utils/getComponentCode"
+import { IconCode, IconEye } from "@tabler/icons-react"
+import { getDashboardCode, getDashboardRepoUrl } from "~/utils"
 import { dashboards } from "~/assets/dashboards"
 import CodeSnippetTabs from "~/components/CodeSnippetTabs"
-import { HeaderControl } from "~/components/HeaderControl"
+import { GithubControl } from "~/layouts/header/GithubControl"
 import App from "./layouts/App"
 import classes from "./styles/layout.module.css"
 
@@ -43,6 +43,8 @@ export async function loader() {
 
 export default function NeuraDash() {
   const codes = useLoaderData<typeof loader>()
+
+  const dashboardRepoUrl = getDashboardRepoUrl("neura-dash")
 
   const [value, setValue] = useState("preview")
 
@@ -74,6 +76,8 @@ export default function NeuraDash() {
               radius="md"
               c="accent.1"
               value={value}
+              size="sm"
+              className={classes.switchControl}
               onChange={setValue}
               data={[
                 {
@@ -97,9 +101,10 @@ export default function NeuraDash() {
               ]}
             />
 
-            <HeaderControl tooltip="Copy">
+            {/* <HeaderControl tooltip="Copy">
               <IconCopy className={classes.copyBtn} size={20} />
-            </HeaderControl>
+            </HeaderControl> */}
+            <GithubControl link={dashboardRepoUrl} />
           </Flex>
         </Group>
 

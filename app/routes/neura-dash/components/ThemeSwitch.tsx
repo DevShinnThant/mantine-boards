@@ -23,8 +23,8 @@ export default function ThemeSwitch() {
       radius="md"
       aria-label="Toggle color scheme"
     >
-      <Sun1 className={cx(classes.icon, classes.light)} />
-      <Moon className={cx(classes.icon, classes.dark)} />
+      <Sun1 className={cx(classes.icon, classes.dark)} />
+      <Moon className={cx(classes.icon, classes.light)} />
     </ActionIcon>
   )
 }
