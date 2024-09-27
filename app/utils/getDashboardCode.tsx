@@ -23,7 +23,11 @@ export type FileContext = {
 export async function getDashboardCode(
   componentFolder: string
 ): Promise<FileContext[]> {
-  const layoutsFolder = path.join(`app/routes/${componentFolder}/layouts`)
+  const layoutsFolder = path.join(
+    process.cwd(),
+    `app/routes/${componentFolder}/layouts`
+  )
+
   const stylesFolder = path.join(layoutsFolder, "styles")
 
   try {
