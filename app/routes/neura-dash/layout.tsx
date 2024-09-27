@@ -101,9 +101,6 @@ export default function NeuraDash() {
               ]}
             />
 
-            {/* <HeaderControl tooltip="Copy">
-              <IconCopy className={classes.copyBtn} size={20} />
-            </HeaderControl> */}
             <GithubControl link={dashboardRepoUrl} />
           </Flex>
         </Group>

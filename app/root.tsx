@@ -1,6 +1,8 @@
 import { useEffect } from "react"
+import "@mantine/charts/styles.css"
 import { ColorSchemeScript, MantineProvider } from "@mantine/core"
 import "@mantine/core/styles.css"
+import "@mantine/dates/styles.css"
 import "@mantine/spotlight/styles.css"
 import type { LinksFunction } from "@remix-run/node"
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react"
@@ -49,7 +51,7 @@ export function Layout({ children }: Children) {
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider defaultColorScheme="light" theme={theme}>
+        <MantineProvider defaultColorScheme="dark" theme={theme}>
           {children}
         </MantineProvider>
         <Scripts />

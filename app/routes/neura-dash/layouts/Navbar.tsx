@@ -47,7 +47,7 @@ export default function Navbar() {
         w={81}
         className={classes.mini_container}
       >
-        <Image w={30} src={colorScheme === "light" ? LogoBlack : LogoWhite} />
+        <Image w={30} src={colorScheme === "dark" ? LogoWhite : LogoBlack} />
         <SimpleGrid
           mt={30}
           pb={10}

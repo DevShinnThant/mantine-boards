@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@mantine/carousel": "^7.12.2",
+    "@mantine/charts": "^7.13.0",
     "@mantine/core": "^7.12.2",
     "@mantine/dates": "^7.13.0",
     "@mantine/hooks": "^7.12.2",
@@ -30,6 +31,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0",
+    "recharts": "2",
     "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
