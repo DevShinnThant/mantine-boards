@@ -29,58 +29,60 @@ export default function ReportSnapshotChart() {
       py="md"
       radius={6}
     >
-      <Group pt="md" px="md" w="100%" justify="space-between">
-        <Flex direction="column" gap={4} align="start">
-          <Text size="lg" fw={600}>
-            Reports Snapshot
-          </Text>
-          <Text fz={12}>Demographic properties of your customer</Text>
-        </Flex>
+      <Flex w="100%" direction="column" align="start" gap={20}>
+        <Group px="md" w="100%" justify="space-between">
+          <Flex direction="column" gap={4} align="start">
+            <Text size="lg" fw={600}>
+              Reports Snapshot
+            </Text>
+            <Text fz={12}>Demographic properties of your customer</Text>
+          </Flex>
 
-        <DatePickerInput
-          styles={{
-            input: {
-              border: `${rem(1)} solid var(--mantine-color-gray-5)`,
-            },
-            placeholder: {
-              color: "var(--mantine-color-gray-6)",
-            },
-          }}
-          size="xs"
-          placeholder="Select Date"
-        />
-      </Group>
+          <DatePickerInput
+            styles={{
+              input: {
+                border: `${rem(1)} solid var(--mantine-color-gray-5)`,
+              },
+              placeholder: {
+                color: "var(--mantine-color-gray-6)",
+              },
+            }}
+            size="xs"
+            placeholder="Select Date"
+          />
+        </Group>
 
-      <SimpleGrid px="md" w="100%" cols={{ base: 2, md: 4, lg: 4 }}>
-        <SnapshotFilter
-          title="All User"
-          value={10234}
-          bg={"var(--mantine-color-gray-3)"}
-          circleColor={"var(--mantine-color-dark-3)"}
-          active
-        />
-        <SnapshotFilter
-          title="Event Count"
-          value={536}
-          bg={"var(--mantine-color-orange-6)"}
-          circleColor="var(--mantine-color-orange-2)"
-          active={false}
-        />
-        <SnapshotFilter
-          title="Conversations"
-          value={21}
-          bg={"var(--mantine-color-green-6)"}
-          circleColor="var(--mantine-color-green-2)"
-          active={false}
-        />
-        <SnapshotFilter
-          title="New Users"
-          value={3321}
-          bg={"var(--mantine-color-blue-6)"}
-          circleColor="var(--mantine-color-blue-2)"
-          active={false}
-        />
-      </SimpleGrid>
+        <SimpleGrid px="md" w="100%" cols={{ base: 2, md: 4, lg: 4 }}>
+          <SnapshotFilter
+            title="All User"
+            value={10234}
+            bg={"var(--mantine-color-gray-3)"}
+            circleColor={"var(--mantine-color-dark-3)"}
+            active
+          />
+          <SnapshotFilter
+            title="Event Count"
+            value={536}
+            bg={"var(--mantine-color-orange-6)"}
+            circleColor="var(--mantine-color-orange-2)"
+            active={false}
+          />
+          <SnapshotFilter
+            title="Conversations"
+            value={21}
+            bg={"var(--mantine-color-green-6)"}
+            circleColor="var(--mantine-color-green-2)"
+            active={false}
+          />
+          <SnapshotFilter
+            title="New Users"
+            value={3321}
+            bg={"var(--mantine-color-blue-6)"}
+            circleColor="var(--mantine-color-blue-2)"
+            active={false}
+          />
+        </SimpleGrid>
+      </Flex>
 
       <AreaChart
         pr="md"

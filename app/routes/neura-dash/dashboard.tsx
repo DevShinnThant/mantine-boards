@@ -33,13 +33,10 @@ export default function Dashboard() {
 
       <Stack w="100%" align="stretch" justify="center">
         <Grid columns={10} w="100%">
-          <Grid.Col h={640} span={{ base: 10, md: 7, lg: 7 }}>
+          <Grid.Col h={500} span={{ base: 10, md: 7, lg: 7 }}>
             <ReportSnapshot />
           </Grid.Col>
-          <Grid.Col
-            h={{ base: 500, md: 640, lg: 640 }}
-            span={{ base: 10, md: 3, lg: 3 }}
-          >
+          <Grid.Col h={500} span={{ base: 10, md: 3, lg: 3 }}>
             <UserChart />
           </Grid.Col>
 

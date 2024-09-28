@@ -42,38 +42,41 @@ export default function Navbar() {
       <Flex
         direction="column"
         align="center"
+        justify="space-between"
         p="sm"
         h="100%"
         w={81}
         className={classes.mini_container}
       >
-        <Image w={30} src={colorScheme === "dark" ? LogoWhite : LogoBlack} />
-        <SimpleGrid
-          mt={30}
-          pb={10}
-          className={classes.mini_link_item_container}
-          cols={1}
-          w="100%"
-        >
-          {sideLinks.map(({ icon: Icon, href, title }) => (
-            <Box
-              key={href}
-              onClick={() => {
-                setCurrentAppTitle(title)
-                if (smallScreen && !isNavbarCollapse) {
-                  openNavbar()
-                }
-              }}
-              data-active={href === currentNav?.href}
-              className={classes.mini_link}
-            >
-              <Icon
-                color={href === currentNav?.href ? "black" : "gray"}
-                variant="Bulk"
-              />
-            </Box>
-          ))}
-        </SimpleGrid>
+        <Flex w="100%" direction="column" align="center" gap={10}>
+          <Image w={30} src={colorScheme === "dark" ? LogoWhite : LogoBlack} />
+          <SimpleGrid
+            mt={30}
+            pb={10}
+            className={classes.mini_link_item_container}
+            cols={1}
+            w="100%"
+          >
+            {sideLinks.map(({ icon: Icon, href, title }) => (
+              <Box
+                key={href}
+                onClick={() => {
+                  setCurrentAppTitle(title)
+                  if (smallScreen && !isNavbarCollapse) {
+                    openNavbar()
+                  }
+                }}
+                data-active={href === currentNav?.href}
+                className={classes.mini_link}
+              >
+                <Icon
+                  color={href === currentNav?.href ? "black" : "gray"}
+                  variant="Bulk"
+                />
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Flex>
 
         <Flex h={100} gap={16} w="100%" direction="column" align="center">
           <Box>

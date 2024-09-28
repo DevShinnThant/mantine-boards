@@ -23,6 +23,9 @@ export default function SnapshotFilter({
       pos="relative"
       w="100%"
       shadow="xs"
+      p={0}
+      px={10}
+      py={4}
       radius="sm"
       bg={bg}
     >
@@ -59,7 +62,7 @@ export default function SnapshotFilter({
         align="start"
         justify="start"
       >
-        <Text c="dark" fz={{ base: 10, md: 14, lg: 14 }} fw={600}>
+        <Text c="dark" fz={{ base: 10, md: 12, lg: 12 }} fw={600}>
           {title}
         </Text>
         <Text
