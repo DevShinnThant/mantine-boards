@@ -14,7 +14,7 @@ export default function Dashboard() {
   return (
     <Flex w="100%" direction="column" align="start" gap={30}>
       <Flex w="100%" align="center" justify="space-between">
-        <Text fz={22} fw={600}>
+        <Text fz={{ base: 18, md: 22, lg: 22 }} fw={600}>
           Analytics dashboard
         </Text>
         <DatePickerInput

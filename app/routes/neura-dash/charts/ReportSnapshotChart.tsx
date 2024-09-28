@@ -58,28 +58,25 @@ export default function ReportSnapshotChart() {
             value={10234}
             bg={"var(--mantine-color-gray-3)"}
             circleColor={"var(--mantine-color-dark-3)"}
-            active
           />
           <SnapshotFilter
             title="Event Count"
             value={536}
             bg={"var(--mantine-color-orange-6)"}
             circleColor="var(--mantine-color-orange-2)"
-            active={false}
+            active
           />
           <SnapshotFilter
             title="Conversations"
             value={21}
             bg={"var(--mantine-color-green-6)"}
             circleColor="var(--mantine-color-green-2)"
-            active={false}
           />
           <SnapshotFilter
             title="New Users"
             value={3321}
             bg={"var(--mantine-color-blue-6)"}
             circleColor="var(--mantine-color-blue-2)"
-            active={false}
           />
         </SimpleGrid>
       </Flex>

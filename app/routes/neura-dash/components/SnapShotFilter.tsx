@@ -5,7 +5,7 @@ interface Props {
   circleColor: string
   title: string
   value: number
-  active: boolean
+  active?: boolean
 }
 
 export default function SnapshotFilter({
@@ -13,7 +13,7 @@ export default function SnapshotFilter({
   circleColor,
   title,
   value,
-  active,
+  active = false,
 }: Props) {
   return (
     <Card
@@ -62,7 +62,7 @@ export default function SnapshotFilter({
         align="start"
         justify="start"
       >
-        <Text c="dark" fz={{ base: 10, md: 12, lg: 12 }} fw={600}>
+        <Text c="dark.9" fz={{ base: 10, md: 12, lg: 12 }} fw={600}>
           {title}
         </Text>
         <Text
