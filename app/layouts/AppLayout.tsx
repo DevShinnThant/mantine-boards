@@ -5,6 +5,7 @@ import { MantineLogo } from "~/components/MantineLogo"
 import ThemeSwitch from "~/components/ThemeSwitch"
 import { GithubControl } from "../components/GithubControl"
 import SearchControl from "../components/SearchControl"
+import { Footer } from "./Footer"
 import classes from "./styles/AppLayout.module.css"
 
 const GITHUB_LINK = import.meta.env.VITE_GITHUB_REPO
@@ -49,6 +50,8 @@ export default function AppLayout({ children }: Children) {
       <AppShell.Main px={0} className={classes.main}>
         {children}
       </AppShell.Main>
+
+      <Footer />
     </AppShell>
   )
 }

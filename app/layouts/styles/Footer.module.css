@@ -1,0 +1,26 @@
+.footer {
+  border-top: rem(1px) solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--mantine-spacing-md) var(--app-header-horizontal-padding);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: var(--mantine-spacing-md)
+      var(--app-header-horizontal-padding-mobile);
+  }
+}
+
+.links {
+  @media (max-width: $mantine-breakpoint-xs) {
+    margin-top: var(--mantine-spacing-md);
+  }
+}

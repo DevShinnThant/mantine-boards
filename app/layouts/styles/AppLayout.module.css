@@ -17,4 +17,5 @@
     var(--mantine-color-dark-8)
   );
   padding-top: var(--app-header-height);
+  padding-bottom: 0;
 }
