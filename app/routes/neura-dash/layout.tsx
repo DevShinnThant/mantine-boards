@@ -18,7 +18,7 @@ import { IconCode, IconEye } from "@tabler/icons-react"
 import { getDashboardCode, getDashboardRepoUrl } from "~/utils"
 import { dashboards } from "~/assets/dashboards"
 import CodeSnippetTabs from "~/components/CodeSnippetTabs"
-import { GithubControl } from "~/layouts/header/GithubControl"
+import { GithubControl } from "~/components/GithubControl"
 import App from "./layouts/App"
 import classes from "./styles/layout.module.css"
 

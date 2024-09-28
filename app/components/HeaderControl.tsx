@@ -1,36 +1,38 @@
-import cx from "clsx";
 import {
   BoxProps,
-  createPolymorphicComponent,
   Tooltip,
   UnstyledButton,
-} from "@mantine/core";
-import classes from "./styles/HeaderControl.module.css";
+  createPolymorphicComponent,
+} from "@mantine/core"
+import cx from "clsx"
+import classes from "./styles/HeaderControl.module.css"
 
 export interface HeaderControlProps extends BoxProps {
-  tooltip: string;
-  "aria-label"?: string;
-  children: React.ReactNode;
+  tooltip: string
+  "aria-label"?: string
+  children: React.ReactNode
+  inherit?: boolean
 }
 
 function _HeaderControl({
   tooltip,
   className,
   "aria-label": label,
+  inherit = true,
   ...others
 }: HeaderControlProps) {
   return (
     <Tooltip label={tooltip}>
       <UnstyledButton
-        className={cx(classes.control, className)}
+        className={cx(classes.control, inherit && classes.colors, className)}
         aria-label={label || tooltip}
         {...others}
       />
     </Tooltip>
-  );
+  )
 }
 
 export const HeaderControl = createPolymorphicComponent<
   "button",
   HeaderControlProps
->(_HeaderControl);
+>(_HeaderControl)

@@ -1,8 +1,8 @@
-import { GithubIcon } from "~/assets/icons";
-import { HeaderControl } from "~/components/HeaderControl";
+import { GithubIcon } from "~/assets/icons"
+import { HeaderControl } from "~/components/HeaderControl"
 
 interface GithubControlProps {
-  link: string;
+  link: string
 }
 
 export function GithubControl({ link }: GithubControlProps) {
@@ -16,5 +16,5 @@ export function GithubControl({ link }: GithubControlProps) {
     >
       <GithubIcon size={22} />
     </HeaderControl>
-  );
+  )
 }

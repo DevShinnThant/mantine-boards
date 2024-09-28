@@ -6,7 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.colors {
   @mixin light {
     border-color: var(--mantine-color-gray-3);
     color: var(--mantine-color-gray-7);

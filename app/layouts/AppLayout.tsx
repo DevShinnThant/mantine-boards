@@ -1,10 +1,10 @@
 import { AppShell, Flex, Group, Text } from "@mantine/core"
 import { Link } from "@remix-run/react"
+import { DiscordControl } from "~/components/DiscordControl"
 import { MantineLogo } from "~/components/MantineLogo"
 import ThemeSwitch from "~/components/ThemeSwitch"
-import { DiscordControl } from "./header/DiscordControl"
-import { GithubControl } from "./header/GithubControl"
-import SearchControl from "./header/SearchControl"
+import { GithubControl } from "../components/GithubControl"
+import SearchControl from "../components/SearchControl"
 import classes from "./styles/AppLayout.module.css"
 
 const GITHUB_LINK = import.meta.env.VITE_GITHUB_REPO

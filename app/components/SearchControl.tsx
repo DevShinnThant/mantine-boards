@@ -1,13 +1,13 @@
-import { Box, Flex, Group, rem, Text, UnstyledButton } from "@mantine/core";
+import { Box, Flex, Group, Text, UnstyledButton, rem } from "@mantine/core"
+import { Spotlight, SpotlightActionData, spotlight } from "@mantine/spotlight"
 import {
   IconArrowRight,
   IconDashboard,
   IconFileText,
   IconHome,
   IconSearch,
-} from "@tabler/icons-react";
-import classes from "./styles/SearchControl.module.css";
-import { Spotlight, SpotlightActionData, spotlight } from "@mantine/spotlight";
+} from "@tabler/icons-react"
+import classes from "./styles/SearchControl.module.css"
 
 const actions: SpotlightActionData[] = [
   {
@@ -37,7 +37,7 @@ const actions: SpotlightActionData[] = [
       <IconFileText style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
     ),
   },
-];
+]
 
 export default function SearchControl() {
   return (
@@ -83,5 +83,5 @@ export default function SearchControl() {
         }}
       />
     </>
-  );
+  )
 }
