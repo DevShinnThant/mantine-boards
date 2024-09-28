@@ -2,7 +2,8 @@ import { useState } from "react"
 import { Flex, Grid, Stack, Text } from "@mantine/core"
 import { DatePickerInput } from "@mantine/dates"
 import { IconCalendar } from "@tabler/icons-react"
-import ReportSnapshot from "./components/ReportSnapshot"
+import ReportSnapshot from "./charts/ReportSnapshotChart"
+import UserChart from "./charts/UserChart"
 import dateStyleClasses from "./styles/date.module.css"
 
 export default function Dashboard() {
@@ -28,11 +29,11 @@ export default function Dashboard() {
 
       <Stack w="100%" align="stretch" justify="center">
         <Grid columns={10} w="100%">
-          <Grid.Col h={600} span={{ base: 10, md: 7, lg: 7 }}>
+          <Grid.Col h={500} span={{ base: 10, md: 7, lg: 7 }}>
             <ReportSnapshot />
           </Grid.Col>
-          <Grid.Col h={560} span={{ base: 10, md: 3, lg: 3 }}>
-            Users
+          <Grid.Col h={500} span={{ base: 10, md: 3, lg: 3 }}>
+            <UserChart />
           </Grid.Col>
 
           <Grid.Col h={350} span={{ base: 10, md: 5, lg: 4 }}>

@@ -9,9 +9,9 @@ import {
   useMantineColorScheme,
 } from "@mantine/core"
 import { DatePickerInput } from "@mantine/dates"
-import SnapshotFilter from "./SnapShotFilter"
+import SnapshotFilter from "../components/SnapShotFilter"
 
-export default function ReportSnapshot() {
+export default function ReportSnapshotChart() {
   const { colorScheme } = useMantineColorScheme()
   return (
     <Card w="100%" h="100%" shadow="sm" p="xl" radius={6}>
