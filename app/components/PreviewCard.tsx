@@ -1,6 +1,15 @@
-import { Avatar, Button, Card, Flex, Image, Overlay, Text } from "@mantine/core"
+import {
+  Avatar,
+  Badge,
+  Button,
+  Card,
+  Flex,
+  Image,
+  Overlay,
+  Text,
+} from "@mantine/core"
 import { useNavigate } from "@remix-run/react"
-import { IconShare, IconSparkles } from "@tabler/icons-react"
+import { IconHeartDollar, IconSparkles } from "@tabler/icons-react"
 import { Dashboard } from "~/assets/dashboards"
 import Creator from "~/assets/profile-avatar.jpeg"
 import classes from "./styles/PreviewCard.module.css"
@@ -22,36 +31,54 @@ export default function PreviewCard({ dashboard }: Props) {
           <Flex w="50%" gap={14} align="center">
             <Avatar size={38} src={Creator} />
             <Flex w="100%" direction="column" gap={0} align="start">
-              <Text className={classes.title} ff="Greycliff" fz={20} fw={500}>
+              <Text className={classes.title} ff="Greycliff" fz={22} fw={500}>
                 {dashboard.title}
               </Text>
               <Text className={classes.description} fz={12} fw={500}>
-                {dashboard.description}
+                __{dashboard.description}
               </Text>
             </Flex>
           </Flex>
 
-          <Flex align="center" gap={5}>
-            <IconSparkles color="var(--mantine-color-accent-3)" size={20} />
-            <Text fw={600} fz={13}>
-              20
-            </Text>
+          <Flex align="center" gap={6}>
+            <Badge
+              leftSection={
+                <IconSparkles color="var(--mantine-color-accent-2)" size={20} />
+              }
+              size="md"
+              px="sm"
+              h={26}
+              color="black"
+            >
+              Popular
+            </Badge>
+            <Badge
+              leftSection={
+                <IconHeartDollar
+                  color="var(--mantine-color-accent-1)"
+                  size={18}
+                />
+              }
+              size="md"
+              px="sm"
+              h={26}
+              color="black"
+            >
+              Free
+            </Badge>
           </Flex>
         </Flex>
       </Card.Section>
 
       <Card.Section className={classes.vote_section}>
-        <Overlay className={classes.overlay}>
+        <Overlay blur={1.4} className={classes.overlay}>
           <Button
             onClick={() => navigate("neura-dash")}
-            variant="gradient"
-            gradient={{
-              from: "gray.9",
-              to: "gray.6",
-            }}
-            size="sm"
+            className={classes.view_button}
+            radius="xl"
+            color="accent.6"
+            size="xs"
             fz={12}
-            leftSection={<IconShare size={16} />}
           >
             View Now
           </Button>
