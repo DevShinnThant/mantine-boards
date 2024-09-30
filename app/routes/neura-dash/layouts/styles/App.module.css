@@ -36,6 +36,7 @@
     width: rem(81);
     height: 100vh !important;
     top: 0;
+    z-index: 101;
   }
 
   &[data-smallscreen="true"][data-collapse="true"] {
