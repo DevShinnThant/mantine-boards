@@ -11,7 +11,7 @@ import {
 import { useNavigate } from "@remix-run/react"
 import { IconHeartDollar, IconSparkles } from "@tabler/icons-react"
 import { Dashboard } from "~/assets/dashboards"
-import Creator from "~/assets/profile-avatar.jpeg"
+import Creator from "~/assets/dev-logo.png"
 import classes from "./styles/PreviewCard.module.css"
 
 interface Props {
@@ -77,7 +77,7 @@ export default function PreviewCard({ dashboard }: Props) {
       <Card.Section className={classes.vote_section}>
         <Overlay blur={1.4} className={classes.overlay}>
           <Button
-            onClick={() => navigate("neura-dash")}
+            onClick={() => navigate(dashboard.link)}
             className={classes.view_button}
             radius="xl"
             color="accent.6"

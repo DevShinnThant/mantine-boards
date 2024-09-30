@@ -37,6 +37,7 @@ export default function SubNavBar({ isNavbarOpen, appTitle }: Props) {
         {currentNav?.subs?.map(({ href, icon: Icon, title }) => (
           <Link
             key={href}
+            preventScrollReset
             className={classes.nav_link}
             data-active={pathname === href}
             to={href}

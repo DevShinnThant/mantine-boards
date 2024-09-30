@@ -1,0 +1,36 @@
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
+.navlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-gray-4));
+
+  border-radius: var(--mantine-radius-xl);
+  padding: rem(8) var(--mantine-spacing-xs);
+
+  &[data-active="true"] {
+    color: white;
+    background-color: black;
+
+    svg {
+      color: white;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+}
+
+.navlinkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(8);
+}

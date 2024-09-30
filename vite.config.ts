@@ -16,6 +16,9 @@ export default defineConfig({
             route("", "routes/neura-dash/dashboard.tsx", { index: true })
             route("ecommerce", "routes/neura-dash/ecommerce.tsx")
           })
+          route("dash-vista", "routes/dash-vista/layout.tsx", () => {
+            route("", "routes/dash-vista/dashboard.tsx", { index: true })
+          })
         })
       },
 

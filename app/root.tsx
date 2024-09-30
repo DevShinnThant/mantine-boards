@@ -5,7 +5,13 @@ import "@mantine/core/styles.css"
 import "@mantine/dates/styles.css"
 import "@mantine/spotlight/styles.css"
 import type { LinksFunction } from "@remix-run/node"
-import { Links, Meta, Outlet, Scripts } from "@remix-run/react"
+import {
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react"
 import AppLayout from "./layouts/AppLayout"
 import { useSyntaxHighlightStore } from "./store/syntax-highter-store"
 import "./styles/fonts/styles.css"
@@ -26,6 +32,18 @@ export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+  },
+  {
+    rel: "preconnect",
+    href: "https://fonts.googleapis.com",
+  },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap",
   },
 ]
 
@@ -55,6 +73,7 @@ export function Layout({ children }: Children) {
           {children}
         </MantineProvider>
         <Scripts />
+        <ScrollRestoration />
       </body>
     </html>
   )

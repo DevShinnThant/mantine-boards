@@ -7,4 +7,14 @@
 
 a {
   text-decoration: none;
+  appearance: none;
+}
+
+.hideScrollbar {
+  ms-overflow-style: none !important /* IE and Edge */;
+  scrollbar-width: none !important /* Firefox */;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
 }

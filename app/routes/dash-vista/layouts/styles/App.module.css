@@ -1,0 +1,23 @@
+.root {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.navbar {
+  position: absolute; /* No need in actual implementation */
+  bottom: 0;
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+  height: calc(100% - rem(60)); /* No need in actual implementation */
+  border: 0;
+  padding: var(--mantine-spacing-lg) calc(var(--mantine-spacing-sm) * 2);
+}
+
+.header {
+  position: absolute; /* No need in actual implementation */
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+  border: 0;
+  width: 100%;
+  margin: 0;
+  padding-left: calc(var(--mantine-spacing-sm) * 2);
+  padding-right: calc(var(--mantine-spacing-sm) * 2);
+}

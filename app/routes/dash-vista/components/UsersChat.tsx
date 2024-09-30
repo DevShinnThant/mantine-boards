@@ -31,7 +31,7 @@ export default function UsersChat() {
   }
 
   return (
-    <Tabs variant="none" value={value} onChange={setValue}>
+    <Tabs visibleFrom="md" variant="none" value={value} onChange={setValue}>
       <Tabs.List className={classes.list}>
         <Tabs.Tab
           data-first-active={true}
@@ -59,9 +59,8 @@ export default function UsersChat() {
           +10
         </Button>
       </Tabs.List>
-
       <Tabs.Panel
-        data-first-active={true}
+        data-first-active={value === "1"}
         className={classes.tabContent}
         value="1"
       >
@@ -140,14 +139,246 @@ export default function UsersChat() {
           </Group>
         </Flex>
       </Tabs.Panel>
-      <Tabs.Panel p={10} className={classes.tabContent} value="2">
-        Second tab content
+      <Tabs.Panel
+        data-first-active={value === "1"}
+        className={classes.tabContent}
+        value="2"
+      >
+        <Flex
+          py={10}
+          h="100%"
+          gap={20}
+          direction="column"
+          justify="space-between"
+          align="start"
+        >
+          <Flex px={10} w="100%" gap={14} direction="column" align="start">
+            <Flex w="100%" align="center" justify="space-between">
+              <Text fz={14} fw={500}>
+                Maxim
+              </Text>
+              <Text className={classes.conversationTime} fz={12} fw={500}>
+                (PM)
+              </Text>
+            </Flex>
+            <Divider w="100%" />
+          </Flex>
+
+          <ScrollArea px={10} scrollbarSize={5} h="100%">
+            <Flex h="100%" direction="column" align="start" gap={10}>
+              {messages.map((message, index) => {
+                const myMessage = message.type === "me"
+                return (
+                  <Flex
+                    w="100%"
+                    my={
+                      myMessage && messages[index - 1].type === "other"
+                        ? rem(8)
+                        : 0
+                    }
+                    key={message.id}
+                    align="center"
+                    gap={10}
+                    justify={myMessage ? "end" : "start"}
+                  >
+                    {message.status === "deliver" && (
+                      <IconChecks
+                        color="var(--mantine-color-green-5)"
+                        size={14}
+                      />
+                    )}
+                    <Box
+                      px={8}
+                      py={5}
+                      className={classes.messageBox}
+                      data-type={message.type}
+                    >
+                      <Text fz={14}>{message.message}</Text>
+                    </Box>
+                    <Text fz={12} c="dimmed">
+                      {dayjs(message.createdAt).format("h:mm")}
+                    </Text>
+                  </Flex>
+                )
+              })}
+            </Flex>
+          </ScrollArea>
+
+          <Group px={10} align="center" w="100%">
+            <Image radius="xl" w={34} h={34} src={User3} />
+            <Input
+              placeholder="Send a message"
+              classNames={{
+                input: classes.textInput,
+              }}
+              flex={1}
+            />
+            <Button p={0} w={34} h={34} radius="xl" color="black">
+              <IconSend color="white" size={16} />
+            </Button>
+          </Group>
+        </Flex>
       </Tabs.Panel>
-      <Tabs.Panel p={10} className={classes.tabContent} value="3">
-        Third tab content
+      <Tabs.Panel
+        data-first-active={value === "1"}
+        className={classes.tabContent}
+        value="3"
+      >
+        <Flex
+          py={10}
+          h="100%"
+          gap={20}
+          direction="column"
+          justify="space-between"
+          align="start"
+        >
+          <Flex px={10} w="100%" gap={14} direction="column" align="start">
+            <Flex w="100%" align="center" justify="space-between">
+              <Text fz={14} fw={500}>
+                Maxim
+              </Text>
+              <Text className={classes.conversationTime} fz={12} fw={500}>
+                (PM)
+              </Text>
+            </Flex>
+            <Divider w="100%" />
+          </Flex>
+
+          <ScrollArea px={10} scrollbarSize={5} h="100%">
+            <Flex h="100%" direction="column" align="start" gap={10}>
+              {messages.map((message, index) => {
+                const myMessage = message.type === "me"
+                return (
+                  <Flex
+                    w="100%"
+                    my={
+                      myMessage && messages[index - 1].type === "other"
+                        ? rem(8)
+                        : 0
+                    }
+                    key={message.id}
+                    align="center"
+                    gap={10}
+                    justify={myMessage ? "end" : "start"}
+                  >
+                    {message.status === "deliver" && (
+                      <IconChecks
+                        color="var(--mantine-color-green-5)"
+                        size={14}
+                      />
+                    )}
+                    <Box
+                      px={8}
+                      py={5}
+                      className={classes.messageBox}
+                      data-type={message.type}
+                    >
+                      <Text fz={14}>{message.message}</Text>
+                    </Box>
+                    <Text fz={12} c="dimmed">
+                      {dayjs(message.createdAt).format("h:mm")}
+                    </Text>
+                  </Flex>
+                )
+              })}
+            </Flex>
+          </ScrollArea>
+
+          <Group px={10} align="center" w="100%">
+            <Image radius="xl" w={34} h={34} src={User3} />
+            <Input
+              placeholder="Send a message"
+              classNames={{
+                input: classes.textInput,
+              }}
+              flex={1}
+            />
+            <Button p={0} w={34} h={34} radius="xl" color="black">
+              <IconSend color="white" size={16} />
+            </Button>
+          </Group>
+        </Flex>
       </Tabs.Panel>
-      <Tabs.Panel p={10} className={classes.tabContent} value="4">
-        Fourth tab content
+
+      <Tabs.Panel
+        data-first-active={value === "1"}
+        className={classes.tabContent}
+        value="4"
+      >
+        <Flex
+          py={10}
+          h="100%"
+          gap={20}
+          direction="column"
+          justify="space-between"
+          align="start"
+        >
+          <Flex px={10} w="100%" gap={14} direction="column" align="start">
+            <Flex w="100%" align="center" justify="space-between">
+              <Text fz={14} fw={500}>
+                Maxim
+              </Text>
+              <Text className={classes.conversationTime} fz={12} fw={500}>
+                (PM)
+              </Text>
+            </Flex>
+            <Divider w="100%" />
+          </Flex>
+
+          <ScrollArea px={10} scrollbarSize={5} h="100%">
+            <Flex h="100%" direction="column" align="start" gap={10}>
+              {messages.map((message, index) => {
+                const myMessage = message.type === "me"
+                return (
+                  <Flex
+                    w="100%"
+                    my={
+                      myMessage && messages[index - 1].type === "other"
+                        ? rem(8)
+                        : 0
+                    }
+                    key={message.id}
+                    align="center"
+                    gap={10}
+                    justify={myMessage ? "end" : "start"}
+                  >
+                    {message.status === "deliver" && (
+                      <IconChecks
+                        color="var(--mantine-color-green-5)"
+                        size={14}
+                      />
+                    )}
+                    <Box
+                      px={8}
+                      py={5}
+                      className={classes.messageBox}
+                      data-type={message.type}
+                    >
+                      <Text fz={14}>{message.message}</Text>
+                    </Box>
+                    <Text fz={12} c="dimmed">
+                      {dayjs(message.createdAt).format("h:mm")}
+                    </Text>
+                  </Flex>
+                )
+              })}
+            </Flex>
+          </ScrollArea>
+
+          <Group px={10} align="center" w="100%">
+            <Image radius="xl" w={34} h={34} src={User3} />
+            <Input
+              placeholder="Send a message"
+              classNames={{
+                input: classes.textInput,
+              }}
+              flex={1}
+            />
+            <Button p={0} w={34} h={34} radius="xl" color="black">
+              <IconSend color="white" size={16} />
+            </Button>
+          </Group>
+        </Flex>
       </Tabs.Panel>
     </Tabs>
   )

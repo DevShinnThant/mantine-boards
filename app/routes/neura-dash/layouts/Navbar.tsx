@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { Avatar, Box, Flex, Image, SimpleGrid } from "@mantine/core"
+import { Avatar, Box, Flex, SimpleGrid } from "@mantine/core"
 import { useMediaQuery } from "@mantine/hooks"
 import { Setting2 } from "iconsax-react"
-import Logo from "~/assets/dev-logo.png"
+import { MantineLogoRounded } from "~/components/MantineLogoRounded"
 import { sideLinks } from "../assets/navLinks"
 import useCurrentNav from "../hooks/useCurrentNav"
 import { useStore } from "../store/client/useStore"
@@ -39,7 +39,7 @@ export default function Navbar() {
         className={classes.mini_container}
       >
         <Flex w="100%" direction="column" align="center" gap={10}>
-          <Image w={40} src={Logo} />
+          <MantineLogoRounded size={40} color="black" />
           <SimpleGrid
             mt={30}
             pb={10}
