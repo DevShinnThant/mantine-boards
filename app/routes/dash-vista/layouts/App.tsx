@@ -1,6 +1,6 @@
-import { AppShell, Burger, Flex, Group, Text } from "@mantine/core"
+import { AppShell } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
-import { MantineLogoRounded } from "~/components/MantineLogoRounded"
+import Header from "./Header"
 import Navbar from "./Navbar"
 import classes from "./styles/App.module.css"
 
@@ -20,15 +20,7 @@ export default function App({ children }: Children) {
       padding="md"
     >
       <AppShell.Header>
-        <Group p={0} h="100%">
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Flex gap="sm" align="center">
-            <MantineLogoRounded color="black" size={30} />
-            <Text fz={18} fw={600}>
-              Tasker
-            </Text>
-          </Flex>
-        </Group>
+        <Header opened={opened} toggle={toggle} />
       </AppShell.Header>
       <AppShell.Navbar>
         <Navbar />

@@ -21,3 +21,23 @@
   padding-left: calc(var(--mantine-spacing-sm) * 2);
   padding-right: calc(var(--mantine-spacing-sm) * 2);
 }
+
+.main::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+
+  position: absolute;
+
+  left: var(--app-shell-navbar-width);
+  top: var(--app-header-height);
+
+  transform: rotate(90deg);
+  background-image: radial-gradient(
+    circle at 100% 0,
+    transparent 0%,
+    transparent rem(20),
+    light-dark(var(--mantine-color-white), var(--mantine-color-dark-7)) rem(10)
+  );
+}

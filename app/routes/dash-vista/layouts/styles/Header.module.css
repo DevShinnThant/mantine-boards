@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.toolSection {
+  @media (min-width: $mantine-breakpoint-md) {
+    margin-left: calc(var(--app-shell-navbar-width) - rem(95.6) - rem(24));
+  }
+}
+
+.searchInput {
+  border: 0;
+  background-color: light-dark(
+    var(--dashVista-background),
+    var(--mantine-color-dark-6)
+  );
+
+  &::placeholder {
+    font-size: rem(12);
+    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-4));
+  }
+  font-size: rem(12);
+  font-weight: 500;
+}
+
+.actionControl {
+  background-color: light-dark(
+    var(--dashVista-background),
+    var(--mantine-color-dark-6)
+  );
+  border-radius: 50%;
+  width: rem(36);
+  height: rem(36);
+}
