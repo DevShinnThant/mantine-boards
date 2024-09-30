@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react"
-import {
-  Avatar,
-  Box,
-  Flex,
-  Image,
-  SimpleGrid,
-  useMantineColorScheme,
-} from "@mantine/core"
+import { Avatar, Box, Flex, Image, SimpleGrid } from "@mantine/core"
 import { useMediaQuery } from "@mantine/hooks"
 import { Setting2 } from "iconsax-react"
-import LogoWhite from "../assets/img/logo-white.svg"
-import LogoBlack from "../assets/img/logo.svg"
+import Logo from "~/assets/dev-logo.png"
 import { sideLinks } from "../assets/navLinks"
 import useCurrentNav from "../hooks/useCurrentNav"
 import { useStore } from "../store/client/useStore"
@@ -35,8 +27,6 @@ export default function Navbar() {
     smallScreen && closeNavbar()
   }, [smallScreen, closeNavbar])
 
-  const { colorScheme } = useMantineColorScheme()
-
   return (
     <Box className={classes.root}>
       <Flex
@@ -49,7 +39,7 @@ export default function Navbar() {
         className={classes.mini_container}
       >
         <Flex w="100%" direction="column" align="center" gap={10}>
-          <Image w={30} src={colorScheme === "dark" ? LogoWhite : LogoBlack} />
+          <Image w={40} src={Logo} />
           <SimpleGrid
             mt={30}
             pb={10}

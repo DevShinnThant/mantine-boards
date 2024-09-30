@@ -9,6 +9,7 @@ export const dashboards = [
     id: 1,
     image: Dashboard1,
     title: "NeuraDash",
+    subTitle: "Nav with branch",
     description:
       "Use these Mantine UI custom dashboard component examples to create clean, responsive interfaces for data visualization and management. These component layouts leverage flexible grid structures and provide both light and dark theme options, perfect for displaying key metrics, charts, and interactive elements.",
     link: "neura-dash",
@@ -18,6 +19,7 @@ export const dashboards = [
     id: 2,
     image: Dashboard2,
     title: "Dashboard 2",
+    subTitle: "Nav with branch",
     description: "Description One Two Three",
     link: "neura-dash",
     git_repo: getDashboardRepoUrl("neura-dash"),
@@ -25,15 +27,18 @@ export const dashboards = [
   {
     id: 3,
     image: Dashboard3,
-    title: "Dashboard 3",
-    description: "Description One Two Three",
-    link: "neura-dash",
-    git_repo: getDashboardRepoUrl("neura-dash"),
+    title: "DashVista",
+    subTitle: "Dashboard for tasker system",
+    description:
+      "Use these Mantine UI custom dashboard component examples to create clean, responsive interfaces for data visualization and management. These component layouts leverage flexible grid structures and provide both light and dark theme options, perfect for displaying key metrics, charts, and interactive elements.",
+    link: "dash-vista",
+    git_repo: getDashboardRepoUrl("dash-vista"),
   },
   {
     id: 4,
     image: Dashboard4,
     title: "Dashboard 4",
+    subTitle: "Nav with branch",
     description: "Description One Two Three",
     link: "neura-dash",
     git_repo: getDashboardRepoUrl("neura-dash"),
