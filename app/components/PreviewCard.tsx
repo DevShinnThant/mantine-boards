@@ -27,11 +27,11 @@ export default function PreviewCard({ dashboard }: Props) {
         <Image className={classes.image} src={dashboard.image} />
       </Card.Section>
       <Card.Section p={20}>
-        <Flex align="center" justify="space-between">
+        <Flex align="center" gap={60} justify="space-between">
           <Flex w="50%" gap={14} align="center">
             <Avatar size={38} src={Creator} />
             <Flex w="100%" direction="column" gap={0} align="start">
-              <Text className={classes.title} ff="Greycliff" fz={22} fw={500}>
+              <Text className={classes.title} ff="Greycliff" fw={500}>
                 {dashboard.title}
               </Text>
               <Text className={classes.description} fz={12} fw={500}>
@@ -40,7 +40,11 @@ export default function PreviewCard({ dashboard }: Props) {
             </Flex>
           </Flex>
 
-          <Flex align="center" gap={6}>
+          <Flex
+            direction={{ base: "column", lg: "row" }}
+            align={{ base: "start", md: "center", lg: "center" }}
+            gap={6}
+          >
             <Badge
               leftSection={
                 <IconSparkles color="var(--mantine-color-accent-2)" size={20} />
