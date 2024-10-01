@@ -5,6 +5,7 @@
   --app-header-horizontal-padding-mobile: var(--mantine-spacing-md);
 
   --dashVista-background: #f7f8fa;
+  --dashVista-accentColor: #6637f5;
 }
 
 a {

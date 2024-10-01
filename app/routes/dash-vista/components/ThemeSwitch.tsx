@@ -14,7 +14,7 @@ export default function ThemeSwitch() {
       checked={colorScheme === "dark"}
       styles={{
         thumb: {
-          backgroundColor: "#6637F5",
+          backgroundColor: "var(--dashVista-accentColor)",
           border: 0,
         },
       }}

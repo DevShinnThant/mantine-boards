@@ -4,6 +4,7 @@ import {
   Flex,
   FloatingIndicator,
   Group,
+  ScrollArea,
   Tabs,
   Text,
 } from "@mantine/core"
@@ -41,29 +42,32 @@ export default function CodeSnippetTabs({ files, initialFile }: Props) {
     <Tabs p={20} variant="none" value={value} onChange={setValue}>
       <Tabs.List ref={setRootRef} className={classes.list}>
         <Group w="100%" justify="space-between" align="center">
-          <Flex align="center">
-            {files.map((file) => (
-              <Tabs.Tab
-                key={file.name}
-                value={file.name}
-                ref={setControlRef(file.name)}
-                className={classes.tab}
-              >
-                <Flex align="center" gap={4}>
-                  {getCodeFileIcon(file.name)}
-                  <Text ff="Greycliff" fz={13} fw={500}>
-                    {file.name}
-                  </Text>
-                </Flex>
-              </Tabs.Tab>
-            ))}
+          <ScrollArea scrollbars="x" scrollbarSize={1}>
+            <Flex pos="relative" align="center">
+              {files.map((file) => (
+                <Tabs.Tab
+                  key={file.name}
+                  value={file.name}
+                  ref={setControlRef(file.name)}
+                  className={classes.tab}
+                >
+                  <Flex align="center" gap={4}>
+                    {getCodeFileIcon(file.name)}
+                    <Text ff="Greycliff" fz={13} fw={500}>
+                      {file.name}
+                    </Text>
+                  </Flex>
+                </Tabs.Tab>
+              ))}
 
-            <FloatingIndicator
-              target={value ? controlsRefs[value] : null}
-              parent={rootRef}
-              className={classes.indicator}
-            />
-          </Flex>
+              <FloatingIndicator
+                pos="absolute"
+                target={value ? controlsRefs[value] : null}
+                parent={rootRef}
+                className={classes.indicator}
+              />
+            </Flex>
+          </ScrollArea>
 
           <CopyButton value={copyFile?.code || ""}>
             {({ copied, copy }) => (
