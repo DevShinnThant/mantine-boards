@@ -1,25 +1,70 @@
+.root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
 .navbar {
   height: calc(100% - rem(20));
-  position: absolute;
+  position: absolute; /* No need in actual implementation */
   top: rem(10);
   left: rem(10);
   border: 0;
   border-radius: var(--mantine-radius-md);
   background-color: light-dark(var(--mantine-color-white), #1d1d1d);
   z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+
+  @media (max-width: $mantine-breakpoint-md) {
+    left: 0;
+    top: var(--app-header-height);
+    height: calc(100% - var(--app-header-height));
+    border-radius: 0;
+  }
 }
 
-.root {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+.header {
+  position: absolute; /* No need in actual implementation */
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+  margin-top: rem(10);
+  padding-left: var(--mantine-spacing-xl);
+  padding-right: var(--mantine-spacing-xl);
+  border: 0;
+  background-color: transparent;
+
+  height: rem(80);
+
+  /* Navbar width + Navbar Left Margin */
+  left: var(--app-shell-navbar-width) + rem(10);
+
+  /* 100% - Navbar width + navbar Left margin */
+  width: calc(100% - var(--app-shell-navbar-width) - rem(10));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(0);
+    width: 100%;
+    padding-left: var(--mantine-spacing-md);
+    padding-right: var(--mantine-spacing-md);
+    height: rem(60);
+    left: 0;
+  }
 }
 
 .main {
-  padding-top: var(--mantine-spacing-xl);
-  padding-left: calc(var(--app-shell-navbar-width) + rem(10) + rem(30));
-  padding-right: rem(30);
+  /* Header Height + Padding */
+  padding-top: calc(var(--app-header-height) + rem(50));
+  padding-bottom: rem(50);
+  padding-left: calc(
+    var(--app-shell-navbar-width) + rem(10) + var(--mantine-spacing-xl)
+  );
+  padding-right: var(--mantine-spacing-xl);
   background-color: light-dark(
-    var(--mantine-color-gray-4),
+    var(--mantine-color-gray-1),
     var(--insightGrid-main-background)
   );
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: calc(var(--app-header-height) + rem(20));
+    padding-bottom: rem(20);
+    padding-left: var(--mantine-spacing-md);
+    padding-right: var(--mantine-spacing-md);
+  }
 }

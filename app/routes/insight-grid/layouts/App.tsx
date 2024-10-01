@@ -1,10 +1,11 @@
 import { AppShell } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
+import Header from "./Header"
 import Navbar from "./Navbar"
 import classes from "./styles/App.module.css"
 
 export default function App({ children }: Children) {
-  const [opened] = useDisclosure()
+  const [opened, { toggle }] = useDisclosure()
 
   return (
     <AppShell
@@ -16,9 +17,9 @@ export default function App({ children }: Children) {
       }}
       navbar={{ width: 280, breakpoint: "sm", collapsed: { mobile: !opened } }}
     >
-      {/* <AppShell.Header>
-
-      </AppShell.Header> */}
+      <AppShell.Header>
+        <Header opened={opened} toggle={toggle} />
+      </AppShell.Header>
       <AppShell.Navbar>
         <Navbar />
       </AppShell.Navbar>
