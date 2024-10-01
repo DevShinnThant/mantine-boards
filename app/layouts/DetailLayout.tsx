@@ -22,16 +22,10 @@ import classes from "./styles/DetailLayout.module.css"
 interface Props {
   children: React.ReactNode
   dashboard: Dashboard
-
   codes: FileContext[]
 }
 
-export default function DetailLayout({
-  children,
-
-  dashboard,
-  codes,
-}: Props) {
+export default function DetailLayout({ children, dashboard, codes }: Props) {
   const [value, setValue] = useState("preview")
   return (
     <Stack className={classes.root} gap={50}>
@@ -40,8 +34,12 @@ export default function DetailLayout({
           <Anchor className={classes.breadcrumbs} size="sm" href="/">
             Dashboards
           </Anchor>
-          <Anchor className={classes.breadcrumbs} href="/neura-dash" size="sm">
-            NeuraDash
+          <Anchor
+            className={classes.breadcrumbs}
+            href={dashboard.link}
+            size="sm"
+          >
+            {dashboard.title}
           </Anchor>
         </Breadcrumbs>
         <Text className={classes.title}>{dashboard.title}</Text>

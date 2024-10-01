@@ -8,6 +8,9 @@
   --dashVista-accentColor: #6637f5;
   --dashVista-green: #6dc489;
   --dashVista-orange: #eb8540;
+
+  --insightGrid-background: #343434;
+  --insightGrid-main-background: #0a0a0a;
 }
 
 a {

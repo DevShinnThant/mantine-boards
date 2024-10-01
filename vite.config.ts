@@ -19,6 +19,9 @@ export default defineConfig({
           route("dash-vista", "routes/dash-vista/layout.tsx", () => {
             route("", "routes/dash-vista/dashboard.tsx", { index: true })
           })
+          route("insight-grid", "routes/insight-grid/layout.tsx", () => {
+            route("", "routes/insight-grid/dashboard.tsx", { index: true })
+          })
         })
       },
 

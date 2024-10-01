@@ -1,0 +1,25 @@
+.navbar {
+  height: calc(100% - rem(20));
+  position: absolute;
+  top: rem(10);
+  left: rem(10);
+  border: 0;
+  border-radius: var(--mantine-radius-md);
+  background-color: light-dark(var(--mantine-color-white), #1d1d1d);
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+}
+
+.root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.main {
+  padding-top: var(--mantine-spacing-xl);
+  padding-left: calc(var(--app-shell-navbar-width) + rem(10) + rem(30));
+  padding-right: rem(30);
+  background-color: light-dark(
+    var(--mantine-color-gray-4),
+    var(--insightGrid-main-background)
+  );
+}
