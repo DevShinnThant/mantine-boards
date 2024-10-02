@@ -36,10 +36,11 @@ import classes from "./styles/Navbar.module.css"
 
 export default function Navbar() {
   return (
-    <Stack w="100%" justify="space-between" h="100%">
+    <Stack w="100%" h="100%">
       <Group w="100%" align="center" justify="space-between">
         <MantineLogoText size={30} color="accent" />
         <Switch
+          visibleFrom="md"
           styles={{
             root: {
               height: "100%",
@@ -68,6 +69,8 @@ export default function Navbar() {
       </Group>
 
       <TextInput
+        visibleFrom="md"
+        mt="md"
         w="100%"
         radius="md"
         leftSection={<SearchNormal1 size={18} />}
@@ -149,7 +152,7 @@ export default function Navbar() {
       </Flex>
       {/* App Links */}
 
-      <Flex direction="column" align="start" gap={14}>
+      <Flex visibleFrom="md" direction="column" align="start" gap={14}>
         <Box className={classes.plan}>
           <Flex w="100%" direction="column" align="center" gap={2}>
             <Box className={classes.planLogoContainer}>

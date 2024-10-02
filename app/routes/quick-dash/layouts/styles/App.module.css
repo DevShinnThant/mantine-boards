@@ -6,7 +6,10 @@
 .navbar {
   height: 100%;
   position: absolute; /* No need in actual implementation */
-  background-color: light-dark(var(--mantine-color-white), #1d1d1d);
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-6)
+  );
   z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
 
   border: 0;
@@ -15,19 +18,42 @@
 
   @media (max-width: $mantine-breakpoint-md) {
     z-index: 2; /* No need in actual implementation */
+    top: var(--app-header-height);
   }
 }
 
 .header {
-  position: absolute; /* No need in actual implementation */
+  position: absolute;
+  left: var(--app-shell-navbar-width);
   z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
-
+  width: calc(100% - var(--app-shell-navbar-width));
   height: rem(80);
+  border: 0;
+  background-color: transparent;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+    left: 0;
+    height: rem(60);
+  }
 }
 
 .main {
   background-color: light-dark(
-    var(--mantine-color-gray-1),
-    var(--insightGrid-main-background)
+    var(--quickDash-background),
+    var(--quickDash-background-dark)
   );
+
+  /* Header height + padding top */
+  padding-top: calc(var(--app-header-height) + rem(20));
+
+  /* Navbar Width + padding left */
+  padding-left: calc(var(--app-shell-navbar-width) + var(--mantine-spacing-md));
+  padding-right: var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: calc(var(--app-header-height) + rem(20));
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
 }

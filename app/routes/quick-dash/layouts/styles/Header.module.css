@@ -1,0 +1,36 @@
+.root {
+  padding: var(--mantine-spacing-md);
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: 0;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-6)
+  );
+  border-radius: var(--mantine-radius-md);
+  box-shadow: var(--mantine-shadow-sm);
+  padding: var(--mantine-spacing-sm);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    border-radius: 0;
+  }
+}
+
+.profileName {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-gray-3));
+}
+
+.profileName ~ p {
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-5));
+}
+
+.noti {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-gray-3));
+}
