@@ -5,6 +5,7 @@
 
 .navbar {
   height: 100%;
+  overflow-y: auto;
   position: absolute; /* No need in actual implementation */
   background-color: light-dark(
     var(--mantine-color-white),
@@ -19,6 +20,12 @@
   @media (max-width: $mantine-breakpoint-md) {
     z-index: 2; /* No need in actual implementation */
     top: var(--app-header-height);
+  }
+
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &[data-collpased="true"] {
+    padding: var(--mantine-spacing-lg) var(--mantine-spacing-xs);
   }
 }
 

@@ -1,10 +1,17 @@
 import { Flex, Switch, useMantineColorScheme } from "@mantine/core"
 import { Moon, Sun1 } from "iconsax-react"
+import { useStore } from "../store/client/useStore"
 
 export default function ThemeSwitch() {
+  const { isNavbarCollapse } = useStore()
   const { setColorScheme, colorScheme } = useMantineColorScheme()
   return (
-    <Flex m="auto" gap={10} align="center">
+    <Flex
+      m="auto"
+      gap={10}
+      direction={isNavbarCollapse ? "column" : "row"}
+      align="center"
+    >
       <Sun1
         color={
           colorScheme === "light"
@@ -25,7 +32,7 @@ export default function ThemeSwitch() {
               "linear-gradient(90deg, var(--mantine-color-orange-6) 0%, var(--mantine-color-yellow-4) 100%)",
           },
         }}
-        size="lg"
+        size={isNavbarCollapse ? "xs" : "lg"}
       />
       <Moon
         color={

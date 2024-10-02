@@ -11,7 +11,7 @@ import {
 import { useNavigate } from "@remix-run/react"
 import { IconHeartDollar, IconSparkles } from "@tabler/icons-react"
 import { Dashboard } from "~/assets/dashboards"
-import Creator from "~/assets/dev-logo.png"
+import Creator from "~/assets/logos/dev-logo.png"
 import classes from "./styles/PreviewCard.module.css"
 
 interface Props {

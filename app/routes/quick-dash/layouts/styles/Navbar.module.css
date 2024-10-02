@@ -1,3 +1,7 @@
+.appTitle {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}
+
 .searchInput {
   border: rem(1.5) solid light-dark(#ececf0, var(--mantine-color-dark-4));
   &::placeholder {
@@ -52,6 +56,11 @@
         var(--mantine-color-dark-9)
       );
     }
+  }
+  &[data-collapse="true"] {
+    padding: rem(10);
+    justify-content: center;
+    align-items: center;
   }
 }
 
