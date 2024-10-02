@@ -12,7 +12,9 @@ export default function Dashboard() {
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(12, minmax(0, 1fr))",
-        gridTemplateRows: "repeat(4, minmax(0,1fr))",
+        gridTemplateRows: smallScreen
+          ? "repeat(3, minmax(0,1fr))"
+          : "repeat(4, minmax(0,1fr))",
         gap: rem(20),
       }}
     >

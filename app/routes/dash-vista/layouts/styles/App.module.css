@@ -10,6 +10,10 @@
   height: calc(100% - rem(60));
   border: 0;
   padding: var(--mantine-spacing-lg) calc(var(--mantine-spacing-sm) * 2);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    z-index: 4; /* No need in actual implementation */
+  }
 }
 
 .header {
