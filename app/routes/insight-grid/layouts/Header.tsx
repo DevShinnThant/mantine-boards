@@ -10,7 +10,7 @@ import {
   TextInput,
 } from "@mantine/core"
 import { Notification, SearchNormal1, Setting } from "iconsax-react"
-import ProfileImage from "~/assets/avatar-3.jpg"
+import ProfileImage from "~/assets/logos/avatar.jpg"
 import classes from "./styles/Header.module.css"
 
 interface Props {

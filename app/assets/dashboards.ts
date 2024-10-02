@@ -1,8 +1,8 @@
 import { getDashboardRepoUrl } from "~/utils"
 import DashVista from "~/assets/preview-images/dash-vista.png"
-import Dashboard4 from "~/assets/preview-images/dashboard-7.png"
 import InsightGrid from "~/assets/preview-images/insight-grid.png"
 import NeuraDash from "~/assets/preview-images/neura-dash.png"
+import QuickDash from "~/assets/preview-images/quick-dash.png"
 
 export const dashboards = [
   {
@@ -37,12 +37,13 @@ export const dashboards = [
   },
   {
     id: 4,
-    image: Dashboard4,
-    title: "Dashboard 4",
-    subTitle: "Nav with branch",
-    description: "Description One Two Three",
-    link: "neura-dash",
-    git_repo: getDashboardRepoUrl("neura-dash"),
+    image: QuickDash,
+    title: "QuickDash",
+    subTitle: "Analytic Dashboard",
+    description:
+      "Use these Mantine UI custom dashboard component examples to create clean, responsive interfaces for data visualization and management. These component layouts leverage flexible grid structures and provide both light and dark theme options, perfect for displaying key metrics, charts, and interactive elements.",
+    link: "quick-dash",
+    git_repo: getDashboardRepoUrl("quick-dash"),
   },
 ] as const
 

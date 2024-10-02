@@ -1,0 +1,166 @@
+.searchInput {
+  border: rem(1.5) solid light-dark(#ececf0, var(--mantine-color-dark-4));
+  &::placeholder {
+    font-size: rem(13);
+    color: light-dark(var(--mantine-color-dark-3), var(--mantine-color-gray4));
+  }
+  font-size: rem(13);
+  font-weight: 500;
+}
+
+.navTitle {
+  color: light-dark(var(--mantine-color-dark-3), var(--mantine-color-dark-1));
+}
+
+.navlink {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: rem(10);
+
+  padding: rem(10) rem(12);
+  border-radius: var(--mantine-radius-md);
+
+  svg {
+    color: light-dark(var(--mantine-color-dark-2), var(--mantine-color-dark-2));
+  }
+
+  @mixin hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-1),
+      var(--mantine-color-dark-4)
+    );
+  }
+
+  &[data-active="true"] {
+    background-color: light-dark(
+      var(--mantine-color-gray-1),
+      var(--mantine-color-white)
+    );
+
+    p {
+      color: light-dark(
+        var(--mantine-color-dark-9),
+        var(--mantine-color-dark-9)
+      );
+    }
+
+    svg {
+      color: light-dark(
+        var(--mantine-color-dark-9),
+        var(--mantine-color-dark-9)
+      );
+    }
+  }
+}
+
+.nav_title {
+  font-size: rem(14);
+  font-weight: 500;
+  letter-spacing: rem(-0.6);
+  color: light-dark(var(--mantine-color-dark-3), var(--mantine-color-dark-1));
+}
+
+.appImageContainer {
+  width: rem(30);
+  height: rem(30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(4);
+  border: rem(1) solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-radius: rem(6);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.plan {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16);
+  width: 100%;
+  min-height: rem(212);
+  box-shadow: var(--mantine-shadow-sm);
+  border-radius: rem(10);
+  background-image: linear-gradient(
+    0deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(255deg 91% 93%) 22%,
+    hsl(255deg 91% 87%) 42%,
+    hsl(255deg 91% 80%) 61%,
+    hsl(255deg 91% 73%) 81%,
+    hsl(255deg 91% 67%) 100%
+  );
+  padding: var(--mantine-spacing-md);
+  overflow: hidden;
+}
+
+.plan::after {
+  content: "";
+  position: absolute;
+  width: rem(100);
+  height: rem(100);
+  border-radius: 50%;
+  right: -50px;
+  top: -50px;
+  background-color: var(--mantine-color-gray-0);
+  opacity: 0.2;
+}
+
+.plan::before {
+  content: "";
+  position: absolute;
+  width: rem(90);
+  height: rem(90);
+  border-radius: 50%;
+  right: 0px;
+  top: 70px;
+  background-color: var(--mantine-color-gray-0);
+  opacity: 0.2;
+}
+
+.planLogoContainer {
+  width: rem(30);
+  height: rem(30);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: var(--mantine-color-gray-2);
+  border-radius: rem(6);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.learnMore {
+  width: 100%;
+  box-shadow: var(--mantine-shadow-sm);
+
+  background-color: white;
+  color: black;
+
+  @mixin hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.upgradePlan {
+  width: 100%;
+  background-color: red;
+  padding-top: rem(4);
+  padding-bottom: rem(4);
+  border-radius: var(--mantine-radius-xl);
+  box-shadow: var(--mantine-shadow-sm);
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: rem(4);
+  gap: rem(30);
+}

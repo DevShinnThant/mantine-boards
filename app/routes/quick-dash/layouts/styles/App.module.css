@@ -1,0 +1,33 @@
+.root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.navbar {
+  height: 100%;
+  position: absolute; /* No need in actual implementation */
+  background-color: light-dark(var(--mantine-color-white), #1d1d1d);
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+
+  border: 0;
+  box-shadow: var(--mantine-shadow-xs);
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    z-index: 2; /* No need in actual implementation */
+  }
+}
+
+.header {
+  position: absolute; /* No need in actual implementation */
+  z-index: var(--app-header-z-index) - 1; /* No need in actual implementation */
+
+  height: rem(80);
+}
+
+.main {
+  background-color: light-dark(
+    var(--mantine-color-gray-1),
+    var(--insightGrid-main-background)
+  );
+}

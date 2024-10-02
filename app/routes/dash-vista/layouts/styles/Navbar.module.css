@@ -3,16 +3,14 @@
 }
 
 .navlink {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  width: 100%;
-
-  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-gray-4));
-
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: var(--mantine-radius-xl);
   padding: rem(8) var(--mantine-spacing-xs);
+  color: light-dark(var(--mantine-color-gray-8), var(--mantine-color-gray-4));
 
   &[data-active="true"] {
     color: white;
@@ -25,6 +23,13 @@
     p {
       font-weight: 500;
     }
+  }
+
+  @mixin hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-1),
+      var(--mantine-color-dark-6)
+    );
   }
 }
 

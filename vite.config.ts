@@ -22,6 +22,9 @@ export default defineConfig({
           route("insight-grid", "routes/insight-grid/layout.tsx", () => {
             route("", "routes/insight-grid/dashboard.tsx", { index: true })
           })
+          route("quick-dash", "routes/quick-dash/layout.tsx", () => {
+            route("", "routes/quick-dash/dashboard.tsx", { index: true })
+          })
         })
       },
 

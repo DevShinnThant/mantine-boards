@@ -11,7 +11,7 @@ import {
   rem,
 } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
-import { Link } from "@remix-run/react"
+import { Link, useLocation } from "@remix-run/react"
 import {
   IconFolder,
   IconMessageCircle,
@@ -113,9 +113,10 @@ export default function Navbar() {
   )
 }
 
-const NavLink = ({ id, title, icon: Icon, link }: NavLink) => {
+const NavLink = ({ title, icon: Icon, link }: NavLink) => {
+  const { pathname } = useLocation()
   return (
-    <Link data-active={id === 1} className={classes.navlink} to={link}>
+    <Link data-active={pathname === link} className={classes.navlink} to={link}>
       <Icon size={20} />
       <Text className={classes.title} lts={-0.5}>
         {title}
@@ -168,7 +169,7 @@ const navlinks = [
     id: 1,
     icon: Home2,
     title: "Home",
-    link: "/insight-grid/dashboard",
+    link: "/insight-grid",
     files: [],
   },
   {
