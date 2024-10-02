@@ -1,0 +1,26 @@
+.root {
+  cursor: pointer;
+  width: 100%;
+  background-color: light-dark(var(--mantine-color-white), transparent);
+  padding: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  border: 0.1px solid
+    light-dark(var(--mantine-color-dark-0), var(--mantine-color-gray-8));
+  box-shadow: var(--mantine-shadow-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: rem(12);
+
+  .content {
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-1),
+      var(--mantine-color-dark-8)
+    );
+  }
+}

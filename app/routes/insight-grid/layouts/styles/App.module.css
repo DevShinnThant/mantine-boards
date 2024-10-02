@@ -18,6 +18,8 @@
     top: var(--app-header-height);
     height: calc(100% - var(--app-header-height));
     border-radius: 0;
+
+    z-index: 2; /* No need in actual implementation */
   }
 }
 

@@ -93,12 +93,12 @@ export default function Navbar() {
         <Flex h="100%" gap={4} direction="column" align="start">
           {navlinks.map((navlink) => {
             return navlink.files.length > 0 ? (
-              <Folder {...navlink} />
+              <Folder key={navlink.id} {...navlink} />
             ) : (
-              <>
+              <Flex w="100%" direction="column" align="start" key={navlink.id}>
                 <NavLink {...navlink} />
                 {navlink.hasBorderBottom && <Divider my={10} w="100%" />}
-              </>
+              </Flex>
             )
           })}
         </Flex>
@@ -257,7 +257,7 @@ const others: NavLink[] = [
     icon: MessageQuestion,
   },
   {
-    id: 2,
+    id: 12,
     title: "Setting",
     link: "/insight-grid/setting",
     files: [],

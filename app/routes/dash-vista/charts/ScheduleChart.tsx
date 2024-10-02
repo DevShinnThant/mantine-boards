@@ -24,16 +24,17 @@ export default function ScheduleChart() {
         barProps={{
           radius: 4,
         }}
+        maxBarWidth={20}
         data={[
           {
             item: "Mon",
             time: 2,
-            color: "var(--dashVista-accentColor)",
+            color: "var(--mantine-color-violet-8)",
           },
           {
             item: "Tue",
-            time: 8,
-            color: "var(--dashVista-green)",
+            time: 5,
+            color: "var(--mantine-color-blue-2)",
           },
           { item: "Wed", time: 1, color: "var(--dashVista-green)" },
           {
@@ -41,7 +42,7 @@ export default function ScheduleChart() {
             time: 6,
             color: "var(--dashVista-orange)",
           },
-          { item: "Fri", time: 4, color: "var(--dashVista-accentColor)" },
+          { item: "Fri", time: 4, color: "var(--mantine-color-red-4)" },
         ]}
         dataKey="item"
         type="default"

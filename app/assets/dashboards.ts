@@ -1,13 +1,13 @@
 import { getDashboardRepoUrl } from "~/utils"
-import Dashboard2 from "~/assets/preview-images/dashboard-6.jpeg"
+import DashVista from "~/assets/preview-images/dash-vista.png"
 import Dashboard4 from "~/assets/preview-images/dashboard-7.png"
-import Dashboard3 from "~/assets/preview-images/dashboard-8.png"
-import Dashboard1 from "~/assets/preview-images/dashboard-9.png"
+import InsightGrid from "~/assets/preview-images/insight-grid.png"
+import NeuraDash from "~/assets/preview-images/neura-dash.png"
 
 export const dashboards = [
   {
     id: 1,
-    image: Dashboard1,
+    image: NeuraDash,
     title: "NeuraDash",
     subTitle: "Nav with branch",
     description:
@@ -17,7 +17,7 @@ export const dashboards = [
   },
   {
     id: 2,
-    image: Dashboard2,
+    image: InsightGrid,
     title: "InsightGrid",
     subTitle: "Gallery-like dashboard",
     description:
@@ -27,7 +27,7 @@ export const dashboards = [
   },
   {
     id: 3,
-    image: Dashboard3,
+    image: DashVista,
     title: "DashVista",
     subTitle: "Dashboard for tasker system",
     description:

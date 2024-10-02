@@ -1,0 +1,38 @@
+.root {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(12);
+}
+
+.imageSection {
+  width: 100%;
+  position: relative;
+  height: rem(168);
+  padding: rem(30) rem(55);
+  background-color: light-dark(var(--mantine-color-white), #1d1d1d);
+  border-radius: rem(8);
+
+  .actionIcon {
+    position: absolute;
+    top: rem(10);
+    right: rem(10);
+  }
+
+  @mixin light {
+    border: rem(0.1) solid var(--mantine-color-gray-3);
+    box-shadow: var(--mantine-shadow-xs);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    height: rem(300);
+  }
+}
+
+.title {
+  font-size: rem(13);
+  font-weight: 700;
+  letter-spacing: rem(-0.3);
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}

@@ -27,7 +27,7 @@ export default function Dashboard() {
       <Box
         h={{
           base: 400,
-          md: 700,
+          md: 800,
         }}
         style={{
           gridColumn: smallScreen ? "span 12 / span 12" : "span 5 / span 12",
