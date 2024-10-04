@@ -16,6 +16,7 @@ export default function UnqiueVisitorChart() {
           styles={{
             input: {
               fontSize: rem(10),
+              fontWeight: 600,
               border: "none",
               letterSpacing: rem(-0.4),
               background:
