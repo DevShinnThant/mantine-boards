@@ -29,9 +29,24 @@ export default function PageNamesChart() {
   }
 
   return (
-    <CardWrapper p={0} h="100%">
-      <Tabs h="100%" variant="none" value={value} onChange={setValue}>
-        <Flex align="center" p={16} justify="space-between">
+    <CardWrapper p={0} pb={16} h="100%">
+      <Tabs
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+        h="100%"
+        variant="none"
+        value={value}
+        onChange={setValue}
+      >
+        <Flex
+          gap={6}
+          direction={{ base: "column", md: "row" }}
+          align="center"
+          p={16}
+          justify="space-between"
+        >
           <Tabs.List ref={setRootRef} className={classes.list}>
             <Tabs.Tab
               value="1"
@@ -106,7 +121,7 @@ export default function PageNamesChart() {
           </Flex>
         </Flex>
 
-        <Box className={classes.chartWrapper} mx={16}>
+        <Box flex={1} className={classes.chartWrapper} mx={16}>
           <Tabs.Panel
             style={{
               display: "flex",
@@ -124,6 +139,7 @@ export default function PageNamesChart() {
             <BarChart
               gridAxis="none"
               withXAxis={false}
+              mih={200}
               h="80%"
               styles={{
                 axis: {

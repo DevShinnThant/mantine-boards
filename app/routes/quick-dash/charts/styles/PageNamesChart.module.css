@@ -41,7 +41,6 @@
 }
 
 .chartWrapper {
-  height: 80%;
   border: rem(1.4) solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   border-radius: var(--mantine-radius-md);

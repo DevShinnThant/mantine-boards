@@ -18,7 +18,7 @@ export default function DeviceUsersChart() {
 
   return (
     <CardWrapper px={0} h="100%">
-      <Group px={16} pt={16} align="center" justify="space-between">
+      <Group px={16} align="center" justify="space-between">
         <Text fz={12} fw={500} lts={-0.4}>
           Device users
         </Text>
@@ -92,6 +92,7 @@ export default function DeviceUsersChart() {
       <BarChart
         pr={16}
         mb={10}
+        mih={200}
         strokeDasharray={10}
         gridColor={colorScheme === "light" ? "gray.2" : "dark.4"}
         gridAxis="xy"

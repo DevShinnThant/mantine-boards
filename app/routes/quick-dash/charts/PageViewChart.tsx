@@ -45,7 +45,7 @@ export default function PageViewChart() {
       </Flex>
       <AreaChart
         pr={20}
-        h="100%"
+        h={{ base: 200, md: 300 }}
         data={[
           {
             date: "July",

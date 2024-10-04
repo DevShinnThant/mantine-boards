@@ -29,7 +29,7 @@ export default function Header({ opened, toggle }: Props) {
             mr={10}
             opened={opened}
             onClick={toggle}
-            hiddenFrom="sm"
+            hiddenFrom="md"
             size="sm"
           />
           <Text lts={-0.4} fw={500}>

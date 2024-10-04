@@ -20,7 +20,7 @@ export default function App({ children }: Children) {
       }}
       navbar={{
         width: isNavbarCollapse ? 60 : 260,
-        breakpoint: "sm",
+        breakpoint: "md",
         collapsed: { mobile: !opened },
       }}
     >
