@@ -16,7 +16,7 @@ export default function App({ children }: Children) {
         header: classes.header,
         main: classes.main,
       }}
-      navbar={{ width: 320, breakpoint: "sm", collapsed: { mobile: !opened } }}
+      navbar={{ width: 320, breakpoint: "md", collapsed: { mobile: !opened } }}
       padding="md"
     >
       <AppShell.Header>
