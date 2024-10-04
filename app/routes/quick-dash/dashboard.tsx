@@ -1,5 +1,6 @@
 import { Box, rem } from "@mantine/core"
 import { DirectInbox, Mouse, User } from "iconsax-react"
+import DeviceUsersChart from "./charts/DeviceUsersChart"
 import PageNamesChart from "./charts/PageNamesChart"
 import PageViewChart from "./charts/PageViewChart"
 import UnqiueVisitorChart from "./charts/UniqueVisitorChart"
@@ -98,7 +99,7 @@ export default function Dashboard() {
           gridRow: "span 3 / span 7",
         }}
       >
-        Bottom
+        <DeviceUsersChart />
       </Box>
     </Box>
   )

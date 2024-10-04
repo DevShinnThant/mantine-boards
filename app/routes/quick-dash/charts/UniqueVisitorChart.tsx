@@ -49,27 +49,27 @@ export default function UnqiueVisitorChart() {
         data={[
           {
             date: "July",
-            Apples: 20,
+            Visitors: 20,
           },
           {
             date: "Aug",
-            Apples: 10,
+            Visitors: 10,
           },
           {
             date: "Sep",
-            Apples: 30,
+            Visitors: 30,
           },
           {
             date: "Oct",
-            Apples: 40,
+            Visitors: 40,
           },
           {
             date: "Nov",
-            Apples: 40,
+            Visitors: 40,
           },
           {
             date: "Dec",
-            Apples: 50,
+            Visitors: 50,
           },
         ]}
         gridColor={colorScheme === "light" ? "gray.2" : "dark.4"}
@@ -79,7 +79,7 @@ export default function UnqiueVisitorChart() {
         gridAxis="xy"
         dataKey="date"
         withDots={false}
-        series={[{ name: "Apples", color: "#8544FF" }]}
+        series={[{ name: "Visitors", color: "#8544FF" }]}
         curveType="step"
         connectNulls
       />

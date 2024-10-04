@@ -10,7 +10,7 @@ export default function PageViewChart() {
     <CardWrapper p={0} pb={20} h="100%">
       <Flex py={10} px={20} align="center" justify="space-between">
         <Text fz={12} fw={500} lts={-0.4}>
-          Unique Visitor
+          Page Views
         </Text>
         <Select
           styles={{
@@ -49,27 +49,27 @@ export default function PageViewChart() {
         data={[
           {
             date: "July",
-            Apples: 40,
+            Views: 40,
           },
           {
             date: "Aug",
-            Apples: 20,
+            Views: 20,
           },
           {
             date: "Sep",
-            Apples: 10,
+            Views: 10,
           },
           {
             date: "Oct",
-            Apples: 15,
+            Views: 15,
           },
           {
             date: "Nov",
-            Apples: 5,
+            Views: 5,
           },
           {
             date: "Dec",
-            Apples: 10,
+            Views: 10,
           },
         ]}
         gridColor={colorScheme === "light" ? "gray.2" : "dark.4"}
@@ -79,7 +79,7 @@ export default function PageViewChart() {
         gridAxis="xy"
         dataKey="date"
         withDots={false}
-        series={[{ name: "Apples", color: "#FE9500" }]}
+        series={[{ name: "Views", color: "#FE9500" }]}
         curveType="step"
         connectNulls
       />

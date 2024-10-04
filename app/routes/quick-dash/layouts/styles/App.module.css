@@ -53,6 +53,7 @@
 
   /* Header height + padding top */
   padding-top: calc(var(--app-header-height) + rem(20));
+  padding-bottom: rem(20);
 
   /* Navbar Width + padding left */
   padding-left: calc(var(--app-shell-navbar-width) + var(--mantine-spacing-md));

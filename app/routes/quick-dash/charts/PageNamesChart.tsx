@@ -134,46 +134,36 @@ export default function PageNamesChart() {
               }}
               withRightYAxis
               rightYAxisProps={{
-                dataKey: "Smartphones",
+                dataKey: "Visitors",
               }}
               maxBarWidth={14}
               data={[
                 {
-                  month: "/Home",
-                  Smartphones: 1200,
-                  Laptops: 900,
-                  Tablets: 200,
+                  page: "/Home",
+                  Visitors: 1200,
                 },
                 {
-                  month: "/Pricing",
-                  Smartphones: 1900,
-                  Laptops: 1200,
-                  Tablets: 400,
+                  page: "/Pricing",
+                  Visitors: 1900,
                 },
                 {
-                  month: "/Contact",
-                  Smartphones: 400,
-                  Laptops: 1000,
-                  Tablets: 200,
+                  page: "/Contact",
+                  Visitors: 400,
                 },
                 {
-                  month: "/News",
-                  Smartphones: 1000,
-                  Laptops: 200,
-                  Tablets: 800,
+                  page: "/News",
+                  Visitors: 1000,
                 },
                 {
-                  month: "/About",
-                  Smartphones: 800,
-                  Laptops: 1400,
-                  Tablets: 1200,
+                  page: "/About",
+                  Visitors: 800,
                 },
               ]}
-              dataKey="month"
+              dataKey="page"
               orientation="vertical"
               yAxisProps={{ width: 80 }}
               barProps={{ radius: 10 }}
-              series={[{ name: "Smartphones", color: "violet.5" }]}
+              series={[{ name: "Visitors", color: "violet.5" }]}
             />
           </Tabs.Panel>
           <Tabs.Panel value="2">Second tab content</Tabs.Panel>
