@@ -1,0 +1,9 @@
+.root {
+  @mixin light {
+    border: 1px solid var(--mantine-color-gray-2);
+  }
+
+  @mixin dark {
+    border: 1px solid var(--mantine-color-dark-5);
+  }
+}
