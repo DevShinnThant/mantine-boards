@@ -5,9 +5,9 @@ import PreviewDashboards from "~/layouts/PreviewDashboards"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Mantine Dashboard" },
+    { title: "Mantine Boards" },
     {
-      name: "Mantine Dashboard",
+      name: "Mantine Boards",
       content:
         "A feature-rich dashboard UI built using Mantine and powered by RemixJS.",
     },

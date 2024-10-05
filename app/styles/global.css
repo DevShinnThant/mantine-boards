@@ -16,6 +16,11 @@
   --quickDash-background-dark: #0a0a0a;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   appearance: none;

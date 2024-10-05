@@ -87,7 +87,7 @@
   background-position: right;
   position: absolute;
   top: 0px;
-  right: -140px;
+  right: -200px;
   z-index: 0;
 
   @media (max-width: em(1230)) {

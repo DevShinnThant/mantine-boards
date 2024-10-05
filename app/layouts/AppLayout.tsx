@@ -31,7 +31,7 @@ export default function AppLayout({ children }: Children) {
             <Flex flex={1} ff="Greycliff" gap="sm" align="center">
               <MantineLogo size={30} color="black" type="mark" />
               <Text visibleFrom="md" className={classes.logo_title} fz={24}>
-                Mantine Dashboard
+                Mantine Boards
               </Text>
               <Text hiddenFrom="md" className={classes.logo_title} fz={24}>
                 Dashboard

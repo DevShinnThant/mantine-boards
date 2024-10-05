@@ -89,7 +89,17 @@ export default function HeaderHero() {
           >
             GitHub
           </Button>
-          <Button size="sm" className={classes.control} color="accent.4">
+          <Button
+            component="a"
+            href="#dashboards-section"
+            size="sm"
+            className={classes.control}
+            pos="relative"
+            style={{
+              zIndex: 1,
+            }}
+            color="accent.4"
+          >
             Browse Dashboards
           </Button>
         </Group>
