@@ -1,45 +1,80 @@
 import { Box, Flex, Group, Text, UnstyledButton, rem } from "@mantine/core"
 import { Spotlight, SpotlightActionData, spotlight } from "@mantine/spotlight"
+import { useNavigate } from "@remix-run/react"
 import {
   IconArrowRight,
   IconDashboard,
   IconFileText,
   IconHome,
+  IconLayoutDashboard,
   IconSearch,
 } from "@tabler/icons-react"
+import { dashboards } from "~/assets/dashboards"
 import classes from "./styles/SearchControl.module.css"
 
-const actions: SpotlightActionData[] = [
-  {
-    id: "home",
-    label: "Home",
-    description: "Get to home page",
-    onClick: () => console.log("Home"),
-    leftSection: (
-      <IconHome style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
-    ),
-  },
-  {
-    id: "dashboard",
-    label: "Dashboard",
-    description: "Get full information about current system status",
-    onClick: () => console.log("Dashboard"),
-    leftSection: (
-      <IconDashboard style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
-    ),
-  },
-  {
-    id: "documentation",
-    label: "Documentation",
-    description: "Visit documentation to lean more about all features",
-    onClick: () => console.log("Documentation"),
-    leftSection: (
-      <IconFileText style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
-    ),
-  },
-]
-
 export default function SearchControl() {
+  const navigate = useNavigate()
+
+  const defaultActions = [
+    {
+      id: "home",
+      label: "Home",
+      description: "Get to home page",
+      onClick: () => navigate("/"),
+      leftSection: (
+        <IconHome style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
+      ),
+    },
+    {
+      id: "dashboard",
+      label: "Dashboard",
+      description: "Get full information about current system status",
+      onClick: () => navigate("#dashboards-section"),
+      leftSection: (
+        <IconDashboard
+          style={{ width: rem(24), height: rem(24) }}
+          stroke={1.5}
+        />
+      ),
+    },
+    {
+      id: "documentation",
+      label: "Documentation",
+      description: "Visit documentation to lean more about all features",
+      onClick: () =>
+        window.open(
+          "https://mantine.dev/getting-started/",
+          "_blank",
+          "noopener,noreferrer"
+        ),
+      leftSection: (
+        <IconFileText
+          style={{ width: rem(24), height: rem(24) }}
+          stroke={1.5}
+        />
+      ),
+    },
+  ]
+
+  const dashboardActions: SpotlightActionData[] = dashboards.map(
+    (dashboard) => {
+      return {
+        id: dashboard.title,
+        label: dashboard.title,
+        description: dashboard.subTitle,
+        onClick: () => navigate(dashboard.link),
+        leftSection: (
+          <IconLayoutDashboard
+            style={{ width: rem(24), height: rem(24) }}
+            stroke={1.5}
+          />
+        ),
+      }
+    }
+  )
+
+  const actions = [...defaultActions, ...dashboardActions]
+
   return (
     <>
       <UnstyledButton onClick={spotlight.open} className={classes.root}>
