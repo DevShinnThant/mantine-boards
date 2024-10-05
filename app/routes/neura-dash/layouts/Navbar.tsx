@@ -41,7 +41,7 @@ export default function Navbar() {
         <Flex w="100%" direction="column" align="center" gap={10}>
           <MantineLogoRounded size={40} color="black" />
           <SimpleGrid
-            mt={30}
+            mt={20}
             pb={10}
             className={classes.mini_link_item_container}
             cols={1}

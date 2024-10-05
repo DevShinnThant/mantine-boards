@@ -2,6 +2,7 @@
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
+  padding-bottom: rem(80);
 }
 
 .inner {
@@ -78,16 +79,15 @@
 }
 
 .image {
-  min-height: rem(700);
-  width: rem(800);
+  width: 80%;
+  height: 100%;
   flex: 1;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  top: 0px;
+  right: -140px;
   z-index: 0;
 
   @media (max-width: em(1230)) {

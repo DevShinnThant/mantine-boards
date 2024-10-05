@@ -1,7 +1,7 @@
-import { Stack } from "@mantine/core";
-import type { MetaFunction } from "@remix-run/node";
-import HeaderHero from "~/layouts/HeaderHero";
-import PreviewDashboards from "~/layouts/PreviewDashboards";
+import { Stack } from "@mantine/core"
+import type { MetaFunction } from "@remix-run/node"
+import HeaderHero from "~/layouts/HeaderHero"
+import PreviewDashboards from "~/layouts/PreviewDashboards"
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,14 +11,14 @@ export const meta: MetaFunction = () => {
       content:
         "A feature-rich dashboard UI built using Mantine and powered by RemixJS.",
     },
-  ];
-};
+  ]
+}
 
 export default function Index() {
   return (
-    <Stack gap="xl">
+    <Stack gap={0}>
       <HeaderHero />
       <PreviewDashboards />
     </Stack>
-  );
+  )
 }

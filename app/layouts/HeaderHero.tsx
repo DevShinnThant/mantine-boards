@@ -3,18 +3,18 @@ import {
   Button,
   Group,
   Image,
-  rem,
   SimpleGrid,
   Text,
   ThemeIcon,
-} from "@mantine/core";
-import { GithubIcon } from "~/assets/icons";
-import classes from "./styles/HeaderHero.module.css";
-import bannerImage from "~/assets/illustrations/banner.webp";
-import { IconFlame, IconMoon, IconShare } from "@tabler/icons-react";
+  rem,
+} from "@mantine/core"
+import { IconFlame, IconMoon, IconShare } from "@tabler/icons-react"
+import { GithubIcon } from "~/assets/icons"
+import bannerImage from "~/assets/illustrations/hero-mockup.svg"
+import classes from "./styles/HeaderHero.module.css"
 
-const GIT_REPO = import.meta.env.VITE_GITHUB_REPO;
-const MANTINE_DOC = import.meta.env.VITE_MANTINE_DOC;
+const GIT_REPO = import.meta.env.VITE_GITHUB_REPO
+const MANTINE_DOC = import.meta.env.VITE_MANTINE_DOC
 
 const features = [
   {
@@ -29,7 +29,7 @@ const features = [
     description:
       "Most components support both dark and light color schemes by default, no additional modifications needed.",
   },
-];
+]
 
 export default function HeaderHero() {
   const items = features.map((feature) => (
@@ -47,7 +47,7 @@ export default function HeaderHero() {
         {feature.description}
       </Text>
     </div>
-  ));
+  ))
 
   return (
     <div className={classes.wrapper}>
@@ -101,5 +101,5 @@ export default function HeaderHero() {
 
       <Image src={bannerImage} className={classes.image} />
     </div>
-  );
+  )
 }
