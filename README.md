@@ -1,40 +1,59 @@
-# Welcome to Remix!
+# Mantine Boards
 
-- 📖 [Remix docs](https://remix.run/docs)
+Mantine Dashboard UI crafted with remix and mantine. Built with responsiveness and accessibility in mind.
 
-## Development
+![alt text](app/assets/illustrations/cover.png)
 
-Run the dev server:
+## Features
 
-```shellscript
-npm run dev
+- 3+ Dashboards
+- Responsive
+- Light/dark mode
+- Accessible
+- Layouts
+
+## Tech Stack
+
+**UI Library:** [Mantine UI](https://mantine.dev/) (Remix + Mantine UI)
+
+**Tool:** [Remix](https://remix.run/)
+
+**Type Checking:** [TypeScript](https://www.typescriptlang.org/)
+
+**Linting/Formatting:** [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)
+
+**Icons:** [Tabler Icons](https://tabler.io/icons) & [Iconsax](https://iconsax-react.pages.dev/)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/DevShinnThant/mantine-boards.git
 ```
 
-## Deployment
+Go to the project directory
 
-First, build your app for production:
-
-```sh
-npm run build
+```bash
+  cd mantine-boards
 ```
 
-Then run the app in production mode:
+Install dependencies
 
-```sh
-npm start
+```bash
+  yarn install
 ```
 
-Now you'll need to pick a host to deploy it to.
+Start the server
 
-### DIY
+```bash
+  yarn start
+```
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+## Author
 
-Make sure to deploy the output of `npm run build`
+Made with ❤️ by [@shinthant](https://github.com/DevShinnThant)
 
-- `build/server`
-- `build/client`
+## License
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
