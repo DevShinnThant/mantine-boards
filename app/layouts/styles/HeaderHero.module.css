@@ -79,15 +79,15 @@
 }
 
 .image {
-  width: 80%;
-  height: 100%;
+  width: 85%;
+  height: rem(900);
   flex: 1;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right;
   position: absolute;
-  top: 0px;
-  right: -200px;
+  bottom: 0px;
+  right: -140px;
   z-index: 0;
 
   @media (max-width: em(1230)) {
