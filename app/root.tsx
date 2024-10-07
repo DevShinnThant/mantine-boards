@@ -111,16 +111,17 @@ export function ErrorBoundary() {
       <div
         style={{
           height: "100svh",
-          width: "100%",
-          // margin: "auto",
+          width: isMobile ? "100%" : "80%", // Adjust width based on screen size
+          margin: "auto",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: isMobile ? "column" : "row",
+          textAlign: isMobile ? "center" : "left", // Center text on mobile
         }}
       >
         <img
-          height={400}
+          height={isMobile ? 300 : 400} // Adjust image size for mobile
           src={WorkInProgressImage}
           alt="work-in-progress-cover"
         />
@@ -128,7 +129,7 @@ export function ErrorBoundary() {
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "start",
+            alignItems: isMobile ? "center" : "start",
             gap: "10px",
           }}
         >
@@ -157,6 +158,7 @@ export function ErrorBoundary() {
             style={{
               marginTop: "20px",
               display: "flex",
+              flexDirection: isMobile ? "column" : "row", // Stack buttons vertically on mobile
               alignItems: "center",
               gap: "20px",
             }}
