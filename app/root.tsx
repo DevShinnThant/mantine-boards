@@ -3,6 +3,7 @@ import "@mantine/charts/styles.css"
 import { Button, ColorSchemeScript, MantineProvider } from "@mantine/core"
 import "@mantine/core/styles.css"
 import "@mantine/dates/styles.css"
+import { useMediaQuery } from "@mantine/hooks"
 import "@mantine/spotlight/styles.css"
 import type { LinksFunction } from "@remix-run/node"
 import {
@@ -15,6 +16,7 @@ import {
   useNavigate,
   useRouteError,
 } from "@remix-run/react"
+import { Analytics } from "@vercel/analytics/react"
 import WorkInProgressImage from "~/assets/illustrations/work-in-progress.png"
 import AppLayout from "./layouts/AppLayout"
 import { useSyntaxHighlightStore } from "./store/syntax-highter-store"
@@ -82,6 +84,7 @@ export function Layout({ children }: Children) {
         </MantineProvider>
         <Scripts />
         <ScrollRestoration />
+        <Analytics />
       </body>
     </html>
   )
@@ -100,16 +103,20 @@ export function ErrorBoundary() {
 
   const navigate = useNavigate()
 
+  // Media query for responsiveness
+  const isMobile = useMediaQuery("(max-width: 768px)")
+
   if (isRouteErrorResponse(error) && error.status === 404) {
     return (
       <div
         style={{
           height: "100svh",
-          width: "80%",
-          margin: "auto",
+          width: "100%",
+          // margin: "auto",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          flexDirection: isMobile ? "column" : "row",
         }}
       >
         <img
