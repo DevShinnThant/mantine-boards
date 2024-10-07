@@ -61,8 +61,8 @@ export default function HeaderHero() {
         <Text className={classes.sub_title}>designed for developers</Text>
         <Text className={classes.description}>
           Build highly customizable and responsive dashboards with ease using
-          our library – over 100 components specifically tailored for creating
-          fast, accessible, and dynamic user interfaces.
+          mantine – made over 30 components specifically used for creating fast,
+          accessible, and dynamic dashboards.
         </Text>
         <Group className={classes.controls}>
           <Button
@@ -85,10 +85,6 @@ export default function HeaderHero() {
             target="_blank"
             variant="default"
             className={classes.control}
-            pos="relative"
-            style={{
-              zIndex: 1,
-            }}
             leftSection={<GithubIcon size={20} />}
           >
             GitHub
@@ -98,10 +94,6 @@ export default function HeaderHero() {
             href="#dashboards-section"
             size="sm"
             className={classes.control}
-            pos="relative"
-            style={{
-              zIndex: 1,
-            }}
             color="accent.4"
           >
             Browse Dashboards

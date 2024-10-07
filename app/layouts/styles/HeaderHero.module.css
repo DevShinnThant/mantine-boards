@@ -6,9 +6,12 @@
 }
 
 .inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 50%;
-  padding-left: calc(var(--mantine-spacing-md) * 4);
+
+  padding-left: var(--app-header-horizontal-padding);
   padding-top: calc(var(--mantine-spacing-xl) * 4);
   flex-direction: column;
   justify-content: center;
@@ -17,8 +20,8 @@
   @media (max-width: $mantine-breakpoint-sm) {
     width: 100%;
     padding-top: calc(var(--mantine-spacing-lg) * 3);
-    padding-left: var(--mantine-spacing-md);
-    padding-right: var(--mantine-spacing-md);
+    padding-left: var(--app-header-horizontal-padding-mobile);
+    padding-right: var(--app-header-horizontal-padding-mobile);
   }
 
   @media (max-width: $mantine-breakpoint-md) {

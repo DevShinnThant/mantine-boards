@@ -3,10 +3,11 @@
     var(--mantine-color-white),
     var(--mantine-color-dark-6)
   );
-  padding: rem(60);
+
+  padding: rem(60) var(--app-header-horizontal-padding);
 
   @media (max-width: $mantine-breakpoint-md) {
-    padding: var(--mantine-spacing-md);
+    padding: var(--app-header-horizontal-padding-mobile);
   }
 }
 
