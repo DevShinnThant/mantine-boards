@@ -85,6 +85,10 @@ export default function HeaderHero() {
             target="_blank"
             variant="default"
             className={classes.control}
+            pos="relative"
+            style={{
+              zIndex: 1,
+            }}
             leftSection={<GithubIcon size={20} />}
           >
             GitHub
